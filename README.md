@@ -60,4 +60,4 @@ See `examples/`: a small business that set a price, raised it 7 weeks later and 
 
 Your ledger is plain markdown in your own folder. Nothing leaves your computer except what your AI tool already sees.
 
-Made by Nina Niamh · [ninaneev.github.io](https://ninaneev.github.io) · [TikTok](https://www.tiktok.com/@nina.neev)
+Made by Nina Niamh Cressoni · [ninaneev.github.io](https://ninaneev.github.io) · [TikTok](https://www.tiktok.com/@nina.neev)
