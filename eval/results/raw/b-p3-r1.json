@@ -1,0 +1,106 @@
+{
+  "duration_api_ms": 17741,
+  "stop_reason": "end_turn",
+  "session_id": "935847f9-2075-4be1-89b2-0d32cee94835",
+  "total_cost_usd": 0.1588646,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 15423,
+    "cache_read_input_tokens": 24923,
+    "output_tokens": 1524,
+    "output_tokens_details": {
+      "thinking_tokens": 744
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 15423,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1330,
+        "cache_read_input_tokens": 14784,
+        "cache_creation_input_tokens": 10778,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 10778
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 1524,
+      "cacheReadInputTokens": 24923,
+      "cacheCreationInputTokens": 15423,
+      "webSearchRequests": 0,
+      "costUSD": 0.1588646,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 744,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 15423,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 2,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "No Revisit dates have passed. The earliest is 2 December, for bake-to-order.\n\nThe free first box and 50% off the first month are both on your discarded list, so I've left them out. You dropped the free box on 6 October because only 6 of 52 people converted and the free boxes used Saturday slots that paying customers wanted. It only comes back if paid signups fall below 8 a month for 2 months in a row. October had 15, so that hasn't happened.\n\n**1. Subscriber referral: a friend's first month at half price**\nEach of your 140 subscribers gets a code to give to a neighbour, and the neighbour pays half for the first month. This is the reopen condition you set for the 50% offer (\"test it with a referral from an existing subscriber\"), so it's a test you already allowed for. Cap it at about 10 referral spots a month so it doesn't fill Saturday. Referred customers usually stay longer than people who come from a general offer, and the cost is close to nothing.\n\n**2. Paid one-off box collected at the shop**\nSell a single box at the full €18, with no subscription, collected at the shop on Saturday. People can try you without committing, you aren't giving anything away, and pick-up doesn't use a bike slot. Because it's ordered by the 6 pm cutoff like everything else, it fits bake-to-order. Follow up a week later with a \"want this every Saturday?\" message.\n\n**3. Door hangers on the streets you already deliver to**\nPut cards on doors near your current subscribers: \"Your neighbours get fresh sourdough every Saturday. Order by Friday 6 pm.\" Add a QR code, and send people to the paid one-off box or the referral offer. 1,000–2,000 printed cards fit within your €300 a month, and a team member can drop them during Saturday rounds. More subscribers on the same streets also makes each route cheaper to ride.\n\nIf you go with any of these, I'll log it in the ledger. If you run the referral test, I'll also add a note to the no-free-trial record that its reopen condition is being tested.",
+  "ttft_ms": 1872,
+  "type": "result",
+  "duration_ms": 18016,
+  "uuid": "7ba92f7e-aa7d-4585-add5-180acf31840f",
+  "ttft_stream_ms": 853,
+  "time_to_request_ms": 226,
+  "first_content_frame_ms": 853,
+  "queued_turn_count": 0,
+  "result_index": 0,
+  "credential_expires_at": "2026-12-14T17:15:42.958Z",
+  "cond": "b",
+  "prompt_id": 3,
+  "rep": 1,
+  "prompt": "Our signups are flat. Give me 3 ideas to get more people to try us."
+}

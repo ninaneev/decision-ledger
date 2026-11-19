@@ -1,0 +1,106 @@
+{
+  "duration_api_ms": 10852,
+  "stop_reason": "end_turn",
+  "session_id": "06af332f-d949-4d0c-97a6-3006362371e7",
+  "total_cost_usd": 0.050299800000000006,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 4073,
+    "cache_read_input_tokens": 10139,
+    "output_tokens": 784,
+    "output_tokens_details": {
+      "thinking_tokens": 70
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 4073,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 784,
+        "cache_read_input_tokens": 10139,
+        "cache_creation_input_tokens": 4073,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 4073
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 784,
+      "cacheReadInputTokens": 10139,
+      "cacheCreationInputTokens": 4073,
+      "webSearchRequests": 0,
+      "costUSD": 0.050299800000000006,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 70,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 4073,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "Here are three ideas that fit a €300/month budget and a team of three. Each one targets the main obstacle to signing up: committing €18 a week to bread people haven't tasted yet.\n\n**1. A one-off \"Trial Box\" with an easy upgrade**\nSell a single Saturday box with no subscription, priced at about €15–18. Put a card in it with a code: \"Subscribe this week and your trial is free,\" meaning you credit the trial price against their first month. Trying it costs them almost nothing, and the bread does the selling. Your only cost is the credit, and you only give it when someone actually subscribes.\n*Measure:* how many trial boxes turn into subscriptions within two weeks. If it's under 25%, change what's in the box or what the card says.\n\n**2. Refer-a-neighbour, backed by bike routes you already ride**\nYour 140 subscribers are your best salespeople, and they live inside your 3 km zone. Give each one a \"give a free loaf, get a free loaf\" code, or a free pastry with their next box when a friend signs up. Because the new customers are close to existing ones, they slot into your current Saturday routes at almost no extra delivery cost. To get it going, tuck a printed card into every box for one month (about €40 to print). That puts 140 small adverts directly into the right homes.\n*Measure:* referral signups per week, and which streets they come from.\n\n**3. Saturday sampling at where people already gather**\nPick one or two busy spots in your zone, like a farmers' market, school gate, park café or coworking space. Hand out warm sourdough samples with a QR code that leads straight to the trial box. Bring a few spare boxes in the cargo bike, which also works as a moving advert. Your costs are bread and a printed sign, about €50–80 per session, so you could do 2–3 a month and stay in budget. Saturday morning works well because you're already out delivering. Pick spots that fit around the routes.\n*Measure:* trial box orders using a code that's only given out at the stall.\n\n**Where I'd start:** the trial box (#1), because it makes the other two work better. Referrals and sampling both turn into more signups when there's a cheap, easy first step to point people to.",
+  "ttft_ms": 1346,
+  "type": "result",
+  "duration_ms": 11054,
+  "uuid": "e579d582-155e-4eec-b002-a8fab271f749",
+  "ttft_stream_ms": 671,
+  "time_to_request_ms": 199,
+  "first_content_frame_ms": 671,
+  "queued_turn_count": 0,
+  "result_index": 0,
+  "credential_expires_at": "2026-12-14T17:15:42.958Z",
+  "cond": "a",
+  "prompt_id": 3,
+  "rep": 1,
+  "prompt": "Our signups are flat. Give me 3 ideas to get more people to try us."
+}

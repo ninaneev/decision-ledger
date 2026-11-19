@@ -1,0 +1,106 @@
+{
+  "duration_api_ms": 14874,
+  "stop_reason": "end_turn",
+  "session_id": "1b24f057-6b04-4212-872d-45a5df7acadc",
+  "total_cost_usd": 0.1546934,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 15565,
+    "cache_read_input_tokens": 25087,
+    "output_tokens": 1257,
+    "output_tokens_details": {
+      "thinking_tokens": 405
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 15565,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1085,
+        "cache_read_input_tokens": 14948,
+        "cache_creation_input_tokens": 10756,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 10756
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 1257,
+      "cacheReadInputTokens": 25087,
+      "cacheCreationInputTokens": 15565,
+      "webSearchRequests": 0,
+      "costUSD": 0.1546934,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 405,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 15565,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 2,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "No ledger revisit dates have passed yet. The next one is 2 December, for the bake-to-order decision.\n\n**A free first box and 50% off the first month are both ruled out.** You decided on 2026-10-06 that every box is paid from week one. In the September test, 52 people took a free box and only 6 became paying subscribers. Each free box cost about €7 in ingredients and took up a Saturday delivery slot that paying customers wanted. You'd only reopen the free trial if paid signups fall below 8 a month for 2 months in a row. October had 15, so you're well above that.\n\nYou can still make the first box easier to say yes to while keeping it paid:\n\n1. **Sell a one-off box at €18 with no subscription.** A lot of first-time hesitation is about commitment, not price. At the end of the box's note, invite them to subscribe. Every box still covers its costs, so the Saturday slot isn't wasted.\n2. **Say \"skip or cancel anytime\" up front.** Put it next to the signup button and in your posts. If cancelling takes one click or one message, say that too.\n3. **Let subscribers gift a box to a neighbour.** The subscriber pays and you deliver with a handwritten card. Because the person comes recommended by someone they know, they're more likely to stay than the people who took free boxes.\n4. **Test the referral offer your ledger allows.** You discarded 50% off the first month, but the reopen condition is \"test it with a referral from an existing subscriber.\" For example, half off the first box only when a current subscriber refers someone. If you want to try it, I'll log it as a reopened, limited test.\n5. **Offer tastes in the shop, not free boxes.** Put out a slice of this week's loaf on the counter with a QR code to sign up. It costs very little and doesn't use a delivery slot.\n6. **Show exactly what's in a box.** Post a photo of a real Saturday box with the contents listed and €18 next to it. A clear photo answers \"is it worth it?\" before anyone has to ask.\n\nWith 140 subscribers, three people and €300 a month for marketing, I'd start with 1 and 3. Neither needs ad spend, and both bring in people who have already paid.\n\nIf you commit to any of these, I'll log it in the ledger.",
+  "ttft_ms": 1542,
+  "type": "result",
+  "duration_ms": 15112,
+  "uuid": "2d406117-efb1-46b5-b9e9-fbe8bb7d395c",
+  "ttft_stream_ms": 791,
+  "time_to_request_ms": 185,
+  "first_content_frame_ms": 791,
+  "queued_turn_count": 0,
+  "result_index": 0,
+  "credential_expires_at": "2026-12-14T17:15:42.958Z",
+  "cond": "c",
+  "prompt_id": 4,
+  "rep": 2,
+  "prompt": "How can I make it easier for new people to try the bread box for the first time?"
+}

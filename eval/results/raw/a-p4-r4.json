@@ -1,0 +1,106 @@
+{
+  "duration_api_ms": 15509,
+  "stop_reason": "end_turn",
+  "session_id": "192c9303-dcd6-4e4b-8e1c-1a1cba826bf1",
+  "total_cost_usd": 0.058267799999999995,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 4069,
+    "cache_read_input_tokens": 10139,
+    "output_tokens": 1184,
+    "output_tokens_details": {
+      "thinking_tokens": 238
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 4069,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1184,
+        "cache_read_input_tokens": 10139,
+        "cache_creation_input_tokens": 4069,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 4069
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 1184,
+      "cacheReadInputTokens": 10139,
+      "cacheCreationInputTokens": 4069,
+      "webSearchRequests": 0,
+      "costUSD": 0.058267799999999995,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 238,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 4069,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "The main thing stopping people is probably commitment, not price. Signing up for a weekly subscription is a big ask from someone who has never tasted your bread. So make the first box feel like a single purchase, and make the subscription the easy next step.\n\n## 1. Offer a one-off trial box with no subscription\n- Sell a \"Try one Saturday\" box. Don't ask for a card on file and don't auto-renew.\n- Keep it at €18 or close to it. A deep discount mostly attracts bargain hunters. Use a small sweetener instead, such as an extra pastry in the first box.\n- Put a card in the box: \"Liked it? Subscribe by Wednesday and next Saturday's box is on the way.\" Follow up with one message on Monday.\n\n## 2. Make the subscription feel safe\nState these clearly on the sign-up page:\n- Skip or pause any week. Cancel any time. No minimum term.\n- The deadline for changes (for example, Wednesday at noon).\n\nIf people can already do this, they need to see it before they sign up.\n\n## 3. Use your 140 subscribers for referrals\nThis is your cheapest channel, and it fits a 3 km delivery area well.\n- Every subscriber gets a \"gift a box\" code. The friend gets their first box free or half price. The subscriber gets a free pastry or €5 off.\n- A free box costs you ingredients and labour, not €18. That's probably less than paid ads would cost you per new subscriber, and referred people usually stay longer.\n\n## 4. Let people taste before they buy\n- Put out samples at the shop counter, especially on Saturdays, with a QR code for the trial box.\n- Bring a sample board to a local market, school event or office in your delivery area once a month. This could cost very little of your €300 budget and reaches exactly the people you can deliver to.\n\n## 5. Remove small points of friction\n- **\"Can you deliver to me?\"** Add a postcode or address check before people get to checkout.\n- **\"What's in it?\"** Show this week's box with a photo, the items and the weight. Add a line like \"feeds 2–3 people for a week\".\n- **\"Is it too much bread?\"** If you can manage it, a smaller box (around €12) gives smaller households an easier way in.\n\n## Two operational guardrails\n- **Cap trial boxes per Saturday** (for example, 15) so you don't overload the bake or the cargo bike. A cap also adds some honest urgency.\n- **Track three numbers:** how many trials you sell, the percentage that become subscriptions, and how many of those are still subscribed after 8 weeks. That tells you whether the offer works or just gives away bread.\n\n**Where I'd start:** the one-off trial box (#1) and the subscriber referral code (#3). Both are cheap, and you could launch them within a week.\n\nIf you tell me your rough cost per box and how you take orders now, I can work out the referral reward and the trial price in numbers.",
+  "ttft_ms": 3715,
+  "type": "result",
+  "duration_ms": 15713,
+  "uuid": "8917f7eb-5589-4ac8-a653-de88b7853593",
+  "ttft_stream_ms": 703,
+  "time_to_request_ms": 200,
+  "first_content_frame_ms": 703,
+  "queued_turn_count": 0,
+  "result_index": 0,
+  "credential_expires_at": "2026-12-14T17:15:42.958Z",
+  "cond": "a",
+  "prompt_id": 4,
+  "rep": 4,
+  "prompt": "How can I make it easier for new people to try the bread box for the first time?"
+}

@@ -1,0 +1,106 @@
+{
+  "duration_api_ms": 20426,
+  "stop_reason": "end_turn",
+  "session_id": "eb2ca3de-6e8a-42d8-bd65-2ebb5c400bc9",
+  "total_cost_usd": 0.17998920000000002,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 17231,
+    "cache_read_input_tokens": 24926,
+    "output_tokens": 1857,
+    "output_tokens_details": {
+      "thinking_tokens": 788
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 17231,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1379,
+        "cache_read_input_tokens": 14787,
+        "cache_creation_input_tokens": 12583,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 12583
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 1857,
+      "cacheReadInputTokens": 24926,
+      "cacheCreationInputTokens": 17231,
+      "webSearchRequests": 0,
+      "costUSD": 0.17998920000000002,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 788,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 17231,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 4,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "No revisit dates have passed. The next one is the bake-to-order review on 2 December.\n\nI left out a free first box. You dropped it on 6 Oct 2026 because only 6 of 52 people converted and the free boxes took Saturday slots that paying customers wanted. It only comes back if paid signups fall below 8 a month for 2 months in a row. October had 15, so \"flat\" here means steady, not falling.\n\nHere are 3 ideas that fit your €300 budget, the 3 km radius and bake-to-order:\n\n**1. Subscriber referral: half off a friend's first month**\n- Each subscriber gets a card to give one friend, worth 50% off their first month. The person who referred them gets a free pastry in their next box.\n- You also dropped 50% off the first month on 6 Oct, but its reopen condition is \"test it with a referral from an existing subscriber.\" This is that test.\n- People who come through a subscriber are much more likely to stay than strangers taking a free offer.\n- Cost: about €36 per new subscriber, and you only pay it when someone actually signs up.\n\n**2. Neighbour cards along your Saturday route**\n- Your bike already stops at 140 doors every Saturday. Put a door card through the neighbouring letterboxes: \"Your neighbours on this street get warm sourdough every Saturday. Order by Friday 6 pm.\"\n- It's cheap (about €60–80 to print), aimed at the right streets, and costs no extra delivery time.\n- Track it with a code on the card, so in a month you'll know if it worked.\n\n**3. Pre-order partner at a local café or deli**\n- Choose one or two businesses within 3 km with the right kind of customers. They order your loaves by 6 pm the day before and serve or sell them with a small \"Get this every Saturday\" card and a QR code.\n- People get to taste your bread without you giving anything away or carrying surplus stock, and it adds paid volume.\n- It doesn't use Saturday slots either, because you deliver to them on weekdays.\n\nI'd start with #1 and #2 together. Both cost little and you'll see results within 4 weeks. Tell me which ones you commit to and I'll log them in the ledger, including reopening the 50%-off option for the referral test.",
+  "ttft_ms": 2230,
+  "type": "result",
+  "duration_ms": 20729,
+  "uuid": "b2b3358d-9347-4288-be5b-9ff3923bef53",
+  "ttft_stream_ms": 861,
+  "time_to_request_ms": 239,
+  "first_content_frame_ms": 861,
+  "queued_turn_count": 0,
+  "result_index": 0,
+  "credential_expires_at": "2026-12-14T17:15:42.958Z",
+  "cond": "b",
+  "prompt_id": 3,
+  "rep": 5,
+  "prompt": "Our signups are flat. Give me 3 ideas to get more people to try us."
+}

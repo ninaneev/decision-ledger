@@ -1,0 +1,106 @@
+{
+  "duration_api_ms": 21446,
+  "stop_reason": "end_turn",
+  "session_id": "fab7bd9c-8b17-403d-ae50-a5ea609f1acd",
+  "total_cost_usd": 0.07593359999999999,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 5170,
+    "cache_read_input_tokens": 9028,
+    "output_tokens": 1638,
+    "output_tokens_details": {
+      "thinking_tokens": 372
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 5170,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1638,
+        "cache_read_input_tokens": 9028,
+        "cache_creation_input_tokens": 5170,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 5170
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 1638,
+      "cacheReadInputTokens": 9028,
+      "cacheCreationInputTokens": 5170,
+      "webSearchRequests": 0,
+      "costUSD": 0.07593359999999999,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 372,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 5170,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "Your best growth channel is the 140 people who already pay you. In a 3 km delivery zone, word of mouth and visibility on your own streets will do more than ads, and they fit a €300/month budget. Here's what I'd do, roughly in priority order.\n\n## 1. Launch gift subscriptions now\nIt's mid-November, so this is the most time-sensitive item. Sell 4-, 8- and 12-week gift boxes (€72 / €144 / €216) with a nice printed card. Many gift recipients will be nearby, because people buy for parents and neighbours, so they fall inside your zone. When a gift runs out, offer to convert it at the normal price; some will stay on. Promote it in the shop, in this week's boxes and on Instagram. Cost: printing only.\n\n## 2. Start a referral programme\n- **Offer:** \"Give a friend their first box free, and get a free week yourself when they stay for a second box.\" Requiring the second box keeps people from signing up just for the freebie.\n- **Cost:** about €18 of retail value per new customer, much less at ingredient cost. That's cheap when one subscriber is worth about €78 a month.\n- **Make it physical:** put two \"free first box\" cards in every Saturday delivery. Most subscribers won't think to share a link, but they will hand a card to a neighbour.\n\n## 3. Grow street by street\nCargo-bike delivery gets cheaper the more boxes you drop on one street. Map your current subscribers and pick the 3–4 streets or blocks with the most.\n- Put leaflets through doors there, mentioning a neighbour: \"12 households on your street already get Saturday bread from us.\"\n- Ask whether a building or office could take a group drop-off.\n\nLeafleting a few hundred homes costs €50–80 in printing and an afternoon of your time.\n\n## 4. Offer a trial\n\"Try one box, no commitment, €12.\" Signing up for a weekly subscription is a big step, and a trial lowers it. Then email or message trial customers before the next Saturday to convert them. Track how many convert. If it's above 30–40%, put more of your budget into trials.\n\n## 5. Partner with local businesses\nFind 2–3 nearby shops that don't compete with you, such as a cheese shop, greengrocer, coffee roaster or wine shop.\n- **Co-branded box:** the partner adds an item and both of you promote it to your customers.\n- **Pickup points:** these let you reach people just outside your 3 km zone without longer bike routes.\n\n## 6. Use the shop and Google\n- **In the shop:** walk-in customers are your warmest leads. Add a visible sign at the till (\"Get this every Saturday at your door, €18\") and train the team to mention it.\n- **Google Business Profile:** keep it current, add photos of the box, and ask happy subscribers for reviews. People search \"sourdough near me.\"\n\n## Suggested monthly €300 split\n| Item | € |\n|---|---|\n| Referral and trial cards, leaflets | 80 |\n| Free first boxes / referral rewards (at cost) | 120 |\n| Gift cards and packaging (Nov–Dec) | 50 |\n| Small boosted Instagram posts, local targeting only | 50 |\n\n## Two things to check before pushing hard\n1. **Churn.** If you lose 5–10 subscribers a month, keeping them is as valuable as finding new ones. A pause option for holidays (instead of cancelling) often fixes a lot of this.\n2. **Capacity.** How many boxes can 3 people bake and deliver on a Saturday morning? If the ceiling is about 180, you'll hit it after about 40 new subscribers, and growing further would mean more staff, a second bike or a Friday delivery slot.\n\nIf you tell me your monthly cancellations and your Saturday capacity, I can help you set a realistic target and timeline.",
+  "ttft_ms": 5914,
+  "type": "result",
+  "duration_ms": 22000,
+  "uuid": "e8e5d600-e9b5-4818-b9d2-d3dccf416bfb",
+  "ttft_stream_ms": 1132,
+  "time_to_request_ms": 560,
+  "first_content_frame_ms": 1132,
+  "queued_turn_count": 0,
+  "result_index": 0,
+  "credential_expires_at": "2026-12-14T17:15:42.958Z",
+  "cond": "a",
+  "prompt_id": 1,
+  "rep": 1,
+  "prompt": "How do I get more customers for the bread box?"
+}

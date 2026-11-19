@@ -1,0 +1,106 @@
+{
+  "duration_api_ms": 15262,
+  "stop_reason": "end_turn",
+  "session_id": "0400f589-fa33-43e2-a2e0-35b4c3a69f8c",
+  "total_cost_usd": 0.0595078,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 4069,
+    "cache_read_input_tokens": 10139,
+    "output_tokens": 1246,
+    "output_tokens_details": {
+      "thinking_tokens": 484
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 4069,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1246,
+        "cache_read_input_tokens": 10139,
+        "cache_creation_input_tokens": 4069,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 4069
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 1246,
+      "cacheReadInputTokens": 10139,
+      "cacheCreationInputTokens": 4069,
+      "webSearchRequests": 0,
+      "costUSD": 0.0595078,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 484,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 4069,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "Here are three ideas that fit a €300/month budget, a team of three and a 3 km delivery area:\n\n**1. Have subscribers give a free box to a neighbour**\nYour 140 subscribers are your best channel. Give each one a voucher for a free trial box to pass to a neighbour, friend or colleague inside your area. If that person subscribes, the subscriber who referred them gets a week free.\n- **Why it works:** a recommendation from someone you know beats any ad. New subscribers also tend to live near existing ones, so they fit your current bike routes.\n- **Cost:** you pay ingredient cost, not €18 retail. If 20 vouchers get used a month, that's probably €100–150.\n\n**2. Hand out samples and door hangers on your delivery routes**\nThe bike is already out on Saturday mornings. Put a door hanger on the houses near your current subscribers. It should say something like \"Your neighbour gets fresh sourdough here every Saturday\" and include a QR code and a half-price first-box code. Once a month, also set up a small tasting stand after deliveries, at a market, a school gate or a busy corner.\n- **Why it works:** people sign up for bread once they've tasted it, and the bike makes you visible locally.\n- **Cost:** printing is about €50–80, plus a few loaves for tasting.\n\n**3. Sell a Christmas gift box now**\nIt's mid-November, so this is the time to launch it. Sell a one-off festive box (stollen, a special loaf, pastries) or a gift subscription for 4 weeks. Give it a clear order deadline and offer delivery or collection the Saturday before Christmas.\n- **Why it works:** it's an easy first purchase for people who don't want to commit to a subscription. It also brings in people who receive the box as a gift. Add a card offering their first subscription week at a discount.\n- **Cost:** mostly your time. Spend part of the month's budget promoting it on local social media or in neighbourhood groups.\n\n**One thing to do for all three:** give each idea its own discount code. After a month you'll know which one brought in subscribers, and you can put the next month's €300 into that one.\n\nIf I had to pick one, I'd start with the referral idea. It costs the least, the subscribers who stick are likely to be the best, and you could launch it this Saturday with a note in the boxes.",
+  "ttft_ms": 6999,
+  "type": "result",
+  "duration_ms": 15485,
+  "uuid": "e4345874-b4e2-4aab-928b-a0e520387b22",
+  "ttft_stream_ms": 795,
+  "time_to_request_ms": 223,
+  "first_content_frame_ms": 796,
+  "queued_turn_count": 0,
+  "result_index": 0,
+  "credential_expires_at": "2026-12-14T17:15:42.958Z",
+  "cond": "a",
+  "prompt_id": 3,
+  "rep": 5,
+  "prompt": "Our signups are flat. Give me 3 ideas to get more people to try us."
+}

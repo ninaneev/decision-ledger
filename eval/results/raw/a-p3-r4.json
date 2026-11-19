@@ -1,0 +1,106 @@
+{
+  "duration_api_ms": 13572,
+  "stop_reason": "end_turn",
+  "session_id": "619fba76-0f5a-43f4-a29d-dbfb50182d8d",
+  "total_cost_usd": 0.056407799999999994,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 4069,
+    "cache_read_input_tokens": 10139,
+    "output_tokens": 1091,
+    "output_tokens_details": {
+      "thinking_tokens": 393
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 4069,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1091,
+        "cache_read_input_tokens": 10139,
+        "cache_creation_input_tokens": 4069,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 4069
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 1091,
+      "cacheReadInputTokens": 10139,
+      "cacheCreationInputTokens": 4069,
+      "webSearchRequests": 0,
+      "costUSD": 0.056407799999999994,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 393,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 4069,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "Here are three ideas that fit your budget and your 3 km delivery area:\n\n**1. Referral offer for your 140 subscribers**\nYour subscribers already live close to the people you want to reach. Give each one a card or link: \"Give a neighbour their first box free, and get a free week yourself when they subscribe.\"\n- **Cost:** about €18–36 for each new subscriber, and only when someone actually signs up. No upfront spend.\n- **Why it works:** a recommendation from a neighbour is the strongest pitch a local food business has. If 1 in 10 subscribers brings in one person, that's 14 new subscribers.\n\n**2. A Christmas gift box, launched now**\nIt's mid-November. Sell \"4 Saturdays of bread\" as a gift at €72, maybe with a festive first box such as a stollen or panettone-style loaf. Market it in the shop, in your newsletter and with a sign on the cargo bike.\n- **Cost:** mostly a printed gift card and some shop signage, roughly €50–100.\n- **Why it works:** the person buying already likes you, and the person receiving gets four weeks of trying you at no cost to them. That's a better trial than any discount. When the fourth box arrives, include a note asking them to keep it going.\n\n**3. Saturday tasting on the delivery route**\nThe cargo bike already rides through your area every Saturday morning, and that's good free advertising. Use it:\n- Put door hangers on the streets your subscribers live on: \"Your neighbours get fresh sourdough every Saturday. Try one box, no subscription, €12.\" Have a QR code go straight to that one-off box.\n- Set up a small tasting table outside the shop on Saturdays with bread, butter and a sign-up sheet.\n- **Cost:** about €100–150 a month for printing and the bread you give away.\n\n**One more thing:** if you don't already, ask every new subscriber \"How did you hear about us?\" With €300 a month, you need to know which of these actually brings people in so you can put the money there.\n\nIf I had to pick one, I'd start the gift box this week. You only have about 5 weeks left to sell it before Christmas.",
+  "ttft_ms": 5492,
+  "type": "result",
+  "duration_ms": 13769,
+  "uuid": "6bc5e83a-86a7-43cc-ad87-b71e0fce208e",
+  "ttft_stream_ms": 682,
+  "time_to_request_ms": 194,
+  "first_content_frame_ms": 682,
+  "queued_turn_count": 0,
+  "result_index": 0,
+  "credential_expires_at": "2026-12-14T17:15:42.958Z",
+  "cond": "a",
+  "prompt_id": 3,
+  "rep": 4,
+  "prompt": "Our signups are flat. Give me 3 ideas to get more people to try us."
+}

@@ -1,0 +1,106 @@
+{
+  "duration_api_ms": 9124,
+  "stop_reason": "end_turn",
+  "session_id": "68302d93-84ff-4dc3-bc72-c7bb02788b61",
+  "total_cost_usd": 0.0495398,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 4073,
+    "cache_read_input_tokens": 10139,
+    "output_tokens": 746,
+    "output_tokens_details": {
+      "thinking_tokens": 52
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 4073,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 746,
+        "cache_read_input_tokens": 10139,
+        "cache_creation_input_tokens": 4073,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 4073
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 746,
+      "cacheReadInputTokens": 10139,
+      "cacheCreationInputTokens": 4073,
+      "webSearchRequests": 0,
+      "costUSD": 0.0495398,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 52,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 4073,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "Here are three ideas that fit a €300 budget, a 3 km delivery radius and a team of three:\n\n**1. A €5 trial box, paid for by a referral**\nEach of your 140 subscribers gets a code that gives a neighbour one Saturday box for €5. When that friend signs up for a month, the subscriber who referred them gets a free pastry or a free week. You only pay for the extra bread and the delivery stops, so it costs very little. Recommendations from neighbours work well inside a 3 km area. If 10% of subscribers each bring one person, that's 14 trials a month. Track each code so you know who converts.\n\n**2. Hand out samples on the route you already ride**\nOn Saturday, spend 45 minutes after deliveries handing out still-warm slices and a card with a QR code for a first-box discount. Do it somewhere busy, like a farmers' market, a school gate or outside a gym. Every couple of weeks, also drop a small loaf and a card at 20 to 30 homes on streets near your existing subscribers. Those are the people who already see your cargo bike go by. Flour, cards and a few loaves should cost about €100 to €150 a month.\n\n**3. Lower the commitment of the first step**\nMany people won't sign up for a weekly subscription straight away. Two options:\n- **Fortnightly plan:** a box every other week, so the total cost feels smaller. Some of those customers will move to weekly later.\n- **Gift box:** a one-off box someone can send to a neighbour, a new parent or a person who just moved in. Push it before Christmas, which is coming up now. It brings in new households who then taste the bread.\n\n**Before any of these:** check whether the problem is too few people hearing about you, or too few deciding to buy. Ask your last 10 to 15 new subscribers how they found you and what nearly stopped them from signing up. If people visit your site but don't sign up, idea 3 matters most. If too few people know you exist, ideas 1 and 2 matter most.\n\nIf I had to pick one to start this month, it would be the referral trial (idea 1), because it uses your happiest customers and costs almost nothing.",
+  "ttft_ms": 1298,
+  "type": "result",
+  "duration_ms": 9325,
+  "uuid": "1ef56cb2-f7cd-4ca3-9f54-f1b3f3186dd0",
+  "ttft_stream_ms": 731,
+  "time_to_request_ms": 201,
+  "first_content_frame_ms": 731,
+  "queued_turn_count": 0,
+  "result_index": 0,
+  "credential_expires_at": "2026-12-14T17:15:42.958Z",
+  "cond": "a",
+  "prompt_id": 3,
+  "rep": 3,
+  "prompt": "Our signups are flat. Give me 3 ideas to get more people to try us."
+}

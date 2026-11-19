@@ -1,0 +1,106 @@
+{
+  "duration_api_ms": 13976,
+  "stop_reason": "end_turn",
+  "session_id": "4b095c76-798f-466b-a532-92858b492203",
+  "total_cost_usd": 0.1530524,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 15404,
+    "cache_read_input_tokens": 24922,
+    "output_tokens": 1241,
+    "output_tokens_details": {
+      "thinking_tokens": 320
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 15404,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1065,
+        "cache_read_input_tokens": 14783,
+        "cache_creation_input_tokens": 10760,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 10760
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 1241,
+      "cacheReadInputTokens": 24922,
+      "cacheCreationInputTokens": 15404,
+      "webSearchRequests": 0,
+      "costUSD": 0.1530524,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 320,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 15404,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 2,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "No Revisit dates have passed yet. The next one is bake-to-order on 2026-12-02.\n\n**Free trials and discounts are already ruled out.** You discarded both on 2026-10-06:\n- **Free first box:** 6 of the 52 people who took one went on to pay, and the free boxes used up Saturday slots that paying customers wanted. You'd reopen this only if paid signups fall below 8 a month for 2 months in a row. October had 15, so that hasn't happened.\n- **50% off the first month:** you expected it to draw the same people and convert just as poorly. You'd reopen this only if you test it as a referral from an existing subscriber.\n\nSo the aim is to make the first paid box feel safe to buy, not to make it free. Here's what fits your decisions:\n\n1. **Make it easy to leave.** Say plainly on the signup page: \"Pay week by week. Skip or cancel any week before the cutoff.\" Most people hold back because they fear getting stuck in a subscription, not because €18 is too much.\n2. **Show exactly what arrives.** Post a photo of this week's box with its contents and a short note on how long each item keeps. People try things more readily when they know what they're getting.\n3. **Test a referral.** This is the one way your ledger lets you reopen a discount. A subscriber shares a link, and the friend gets 50% off their first month. Since the subscriber vouches for the bakery, it should bring better leads than the open free box did. Run it for a set period, track conversion against the 6 of 52 baseline, and limit how many Saturday slots it can take.\n4. **Let subscribers send a box as a gift.** The subscriber pays €18 to have a box sent to a neighbour. It costs you nothing, it uses a paid slot, and the person receiving it gets a no-risk first taste.\n5. **Give out samples in the shop.** Slice a loaf from that day's bake to order for walk-in customers and hand out a card with the signup link. You get a tasting without a free delivery slot and without baking surplus stock.\n6. **Make signup quick.** Ask only for postcode, address and payment. Check right away that the address is within 3 km so nobody signs up and then gets turned away.\n\nI'd start with 1, 2 and 6 because they're free and take an afternoon. Then run the referral test (3) as a 4-week experiment, so you get data on the one path your ledger leaves open.\n\nIf you go ahead with the referral test, I can log it as a new decision.",
+  "ttft_ms": 1491,
+  "type": "result",
+  "duration_ms": 14256,
+  "uuid": "1f199b5a-f305-4c35-b831-59bfd240fd62",
+  "ttft_stream_ms": 767,
+  "time_to_request_ms": 217,
+  "first_content_frame_ms": 767,
+  "queued_turn_count": 0,
+  "result_index": 0,
+  "credential_expires_at": "2026-12-14T17:15:42.958Z",
+  "cond": "b",
+  "prompt_id": 4,
+  "rep": 5,
+  "prompt": "How can I make it easier for new people to try the bread box for the first time?"
+}

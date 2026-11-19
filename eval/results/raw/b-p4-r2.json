@@ -1,0 +1,106 @@
+{
+  "duration_api_ms": 14937,
+  "stop_reason": "end_turn",
+  "session_id": "a3c476c1-cb06-4d1f-99ff-66e40a035d2a",
+  "total_cost_usd": 0.15411239999999998,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 15494,
+    "cache_read_input_tokens": 24922,
+    "output_tokens": 1258,
+    "output_tokens_details": {
+      "thinking_tokens": 392
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 15494,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 992,
+        "cache_read_input_tokens": 14783,
+        "cache_creation_input_tokens": 10850,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 10850
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 1258,
+      "cacheReadInputTokens": 24922,
+      "cacheCreationInputTokens": 15494,
+      "webSearchRequests": 0,
+      "costUSD": 0.15411239999999998,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 392,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 15494,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 2,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "No Revisit dates have passed. The nearest is bake-to-order on 2 December.\n\n**A free first box is ruled out.** You dropped it on 2026-10-06. In September, 6 of the 52 people who got a free box became paying subscribers. Each free box cost about €7 and took a Saturday delivery slot that paying customers wanted. You'd only reopen it if paid signups fall below 8 a month for 2 months in a row. October had 15, so that hasn't happened. 50% off the first month was dropped for the same reason, with one exception: you said you'd test it if it comes through a referral from an existing subscriber.\n\nSo rather than making the first box cheaper, make it feel like less of a commitment:\n\n1. **Test the referral offer your ledger already allows.** A current subscriber gives a friend a code for 50% off their first month, and maybe a free pastry for the subscriber. Referred people are more likely to stay than people who come for a freebie, and you only pay for it when someone signs up. You have 140 subscribers, so you can test this with almost no marketing budget.\n\n2. **Sell a single box with no subscription at full price.** €18 for one Saturday, then a \"keep it coming?\" message on Sunday. You get paid, and someone who is willing to pay €18 once is much more likely to subscribe than someone who got a box for free.\n\n3. **Make \"cancel or skip anytime\" very visible.** Fear of getting stuck in a subscription often stops people more than the price. Put it next to the signup button, and make skipping a week one tap.\n\n4. **Let people taste before they decide.** Hand out slices of the subscription loaf at the shop counter, cut from that day's bake-to-order batch rather than extra stock, so it fits your bake-to-order decision. Add a card with a QR code to sign up for this Saturday.\n\n5. **Let subscribers send a gift box.** A subscriber pays €18 to have one box delivered to a neighbour. You get a new person trying it, it's paid, and it all stays within your 3 km area.\n\nSaturday slots are your limit, so I'd start with #1 and #3. They cost the least and don't add free deliveries.\n\nIf you choose one of these, I'll log it in the ledger. If you run the referral test, that record should also note that the 50% discount reopen condition has been triggered.",
+  "ttft_ms": 2321,
+  "type": "result",
+  "duration_ms": 15192,
+  "uuid": "a360acab-04d6-4dd8-b75f-313da1c2f26f",
+  "ttft_stream_ms": 791,
+  "time_to_request_ms": 204,
+  "first_content_frame_ms": 791,
+  "queued_turn_count": 0,
+  "result_index": 0,
+  "credential_expires_at": "2026-12-14T17:15:42.958Z",
+  "cond": "b",
+  "prompt_id": 4,
+  "rep": 2,
+  "prompt": "How can I make it easier for new people to try the bread box for the first time?"
+}

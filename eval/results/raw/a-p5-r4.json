@@ -1,0 +1,106 @@
+{
+  "duration_api_ms": 24437,
+  "stop_reason": "end_turn",
+  "session_id": "b8bb29dc-7aa1-4874-bdb0-235a268d3578",
+  "total_cost_usd": 0.07497580000000001,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 4065,
+    "cache_read_input_tokens": 10139,
+    "output_tokens": 2021,
+    "output_tokens_details": {
+      "thinking_tokens": 396
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 4065,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2021,
+        "cache_read_input_tokens": 10139,
+        "cache_creation_input_tokens": 4065,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 4065
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 2021,
+      "cacheReadInputTokens": 10139,
+      "cacheCreationInputTokens": 4065,
+      "webSearchRequests": 0,
+      "costUSD": 0.07497580000000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 396,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 4065,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "# Plan to double Sunday Crust subscribers in 30 days\n\nDoubling from 140 to 280 in 30 days means about 35 new subscribers a week. That's possible, but only if the plan is built around referrals and the Christmas season, not paid ads. €300 a month in ads won't get you 140 people. Your existing customers and the shop counter can.\n\n## First, check capacity (days 1–3)\nBefore chasing growth, make sure you can handle 280 boxes on a Saturday morning:\n- **Baking:** Can 3 people bake twice the volume Friday night into Saturday? If not, cap the push at what you can bake, or bring in one part-time baker or rider for Saturdays.\n- **Delivery:** How many boxes fit in one cargo bike trip, and how many trips fit in the morning? Plan routes by area now. Consider adding a **pickup option at the shop** for €2 off. It takes pressure off delivery and reaches people beyond the 3 km radius.\n- If you're short on capacity, open a **waitlist** rather than letting delivery quality slip. Losing early subscribers to late or damaged boxes would cancel out the growth.\n\n## The four levers, ranked by expected impact\n\n**1. Referral programme (target: 50–60 new)**\n- Offer \"Give a box, get a box\": the friend gets their first box free and the referrer gets a free box once the friend pays for a second week.\n- Put a printed card with a personal code in every box for the next 4 Saturdays, and send an email or WhatsApp message to all 140 subscribers.\n- Each free box costs you the ingredients and time, not €18. That's cheaper than any ad, and referred subscribers usually stay longer.\n- For a 40% response rate, make it easy: one link and a ready-made message they can forward.\n\n**2. Christmas gift subscriptions (target: 30–40 new)**\n- This is the biggest opportunity right now. Sell 4-week and 8-week gift boxes (€72 and €144) with a nice printed card, delivered from the first or second Saturday in December.\n- Promote them at the counter, in every box and on Instagram. Sell them to local companies as client or staff gifts.\n- When a gift ends, ask the recipient to continue. That's where gift buyers become regular subscribers.\n\n**3. Convert people already buying from you (target: 25–35 new)**\n- Your walk-in customers already like your bread. Train the team to make one pitch at the till: \"Want this delivered every Saturday? First box is half price.\"\n- Put a sign and a QR code at the till, plus a sign-up sheet.\n- Hand out free tasting slices on the busiest days.\n\n**4. Local saturation within 3 km (target: 20–30 new)**\n- Spend most of the €300 on flyers with a half-price first box offer, dropped on the streets where you already deliver. Cargo bike routes are most efficient when density goes up.\n- Post in neighbourhood Facebook and WhatsApp groups and on Nextdoor-style platforms, with a photo of a real Saturday box.\n- Partner with 2–3 places that don't sell bread, like a coffee shop, a co-working space, a gym or a cheese shop. Leave a stack of cards with them and give them a free box.\n- Offer workplace subscriptions. One delivery stop with 8 boxes is very efficient.\n- Pitch the local paper or a city blog: \"Bakery delivers bread by cargo bike.\" Media likes that story, especially in winter.\n\n## Week by week\n| Week | Focus |\n|---|---|\n| 1 | Check capacity, set up the pickup option, print referral cards and gift cards, brief the team, email subscribers |\n| 2 | Launch referrals in every box, start the till pitch, drop flyers on half the area, post in local groups |\n| 3 | Push gift subscriptions hard, contact companies, set up partner cards, send the press pitch, drop the second flyer wave |\n| 4 | Last call for Christmas gifts, send a referral reminder, phone or message everyone who took a trial box to convert them |\n\n## Watch these numbers weekly\n- New sign-ups by source. Use a different code per channel so you know what works.\n- Trial-to-paid conversion. Free or half-price first boxes only count if people stay. Aim for over 50%.\n- Cancellations. Doubling doesn't help if 30 existing subscribers leave over Christmas, so consider a \"pause for holidays\" option instead of cancelling.\n\n## My honest view\nRealistically, I'd expect **+80 to +140**. Hitting 280 depends mostly on how many of your 140 subscribers refer someone and how well the Christmas gifts sell. Even +80 in a month would be a very strong result for a three-person bakery.\n\nTo sharpen the plan, it would help to know three things: your margin per box, your current Saturday capacity, and your monthly cancellation rate. Your margin decides how generous the referral offer can be.",
+  "ttft_ms": 5529,
+  "type": "result",
+  "duration_ms": 24641,
+  "uuid": "64c12130-95e7-4eb0-aacc-5503298f4b7e",
+  "ttft_stream_ms": 827,
+  "time_to_request_ms": 206,
+  "first_content_frame_ms": 827,
+  "queued_turn_count": 0,
+  "result_index": 0,
+  "credential_expires_at": "2026-12-14T17:15:42.958Z",
+  "cond": "a",
+  "prompt_id": 5,
+  "rep": 4,
+  "prompt": "What would you do in the next 30 days to double our number of subscribers?"
+}

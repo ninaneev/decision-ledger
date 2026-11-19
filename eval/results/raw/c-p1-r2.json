@@ -1,0 +1,106 @@
+{
+  "duration_api_ms": 18588,
+  "stop_reason": "end_turn",
+  "session_id": "e380a4b7-271a-4e39-8a88-ba67ba736082",
+  "total_cost_usd": 0.17013240000000002,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 16410,
+    "cache_read_input_tokens": 25082,
+    "output_tokens": 1691,
+    "output_tokens_details": {
+      "thinking_tokens": 539
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 16410,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1245,
+        "cache_read_input_tokens": 14943,
+        "cache_creation_input_tokens": 11606,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 11606
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 1691,
+      "cacheReadInputTokens": 25082,
+      "cacheCreationInputTokens": 16410,
+      "webSearchRequests": 0,
+      "costUSD": 0.17013240000000002,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 539,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 16410,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 4,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "**Ledger check:** no Revisit dates have passed. The next one is bake-to-order on 2026-12-02, in about two weeks.\n\n**Already ruled out:**\n- **Free trial or free first box.** Discarded 2026-10-06. Only 6 of 52 people converted, and the free boxes took Saturday slots that paying customers wanted. You'd reopen it only if paid signups fall below 8 a month for 2 months in a row. October had 15, so that hasn't happened.\n- **50% off the first month.** Also discarded 2026-10-06, because it attracts the same people as the free box. But its reopen condition is \"test it with a referral from an existing subscriber.\" So that's my first suggestion.\n\n**What I'd do, in order:**\n\n1. **Referral offer.** Each subscriber gets a code. The friend gets half off their first month, and the subscriber who referred them gets a free pastry or loaf. People who come through a paying neighbour are much more likely to stay than people who come for a freebie. Run it for 6–8 weeks and compare how many referred customers stay with the 6 of 52 from the free box.\n\n2. **Fill the streets you already ride.** Your 140 subscribers already map out your best streets. Put a small card through doors on those streets and in their buildings, something like \"your neighbour at no. 12 gets warm bread every Saturday.\" It costs little from the €300 budget, and each new customer adds almost no delivery time because the bike is already passing.\n\n3. **Turn shop customers into subscribers.** People who buy at the counter already like the bread. Give them a taste of this week's box loaf, show a sign-up QR code, and add a line to the receipt. This costs almost nothing.\n\n4. **Gift subscriptions for December.** Sell a 4-week gift box. It's paid upfront, it's well timed for Christmas, and people who receive one often keep subscribing. It fits the paid-from-week-one rule because someone is paying.\n\n5. **Local groups.** Try office managers, coworking spaces and school parent groups within 3 km. One contact can bring in several households on the same streets.\n\n**Check first:** Saturday capacity is your hard limit. How many more boxes can you bake and deliver on a Saturday morning? If the answer is about 20, aim for that number before spending on anything else. Also, keeping current subscribers is cheaper than finding new ones, so it's worth knowing how many cancel each month.\n\nWhen you choose one of these, I'll log it in the ledger.",
+  "ttft_ms": 1969,
+  "type": "result",
+  "duration_ms": 18906,
+  "uuid": "5c190e13-de43-4dcd-a701-f8de19d7fe9e",
+  "ttft_stream_ms": 809,
+  "time_to_request_ms": 264,
+  "first_content_frame_ms": 809,
+  "queued_turn_count": 0,
+  "result_index": 0,
+  "credential_expires_at": "2026-12-14T17:15:42.958Z",
+  "cond": "c",
+  "prompt_id": 1,
+  "rep": 2,
+  "prompt": "How do I get more customers for the bread box?"
+}

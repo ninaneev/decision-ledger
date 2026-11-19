@@ -1,0 +1,106 @@
+{
+  "duration_api_ms": 13366,
+  "stop_reason": "end_turn",
+  "session_id": "2b536943-90a5-41ef-9825-0c451a5e2179",
+  "total_cost_usd": 0.0544838,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 4071,
+    "cache_read_input_tokens": 10139,
+    "output_tokens": 994,
+    "output_tokens_details": {
+      "thinking_tokens": 291
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 4071,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 994,
+        "cache_read_input_tokens": 10139,
+        "cache_creation_input_tokens": 4071,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 4071
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 994,
+      "cacheReadInputTokens": 10139,
+      "cacheCreationInputTokens": 4071,
+      "webSearchRequests": 0,
+      "costUSD": 0.0544838,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 291,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 4071,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "Given you're local, have €300 a month, and already have 140 people who like you, I'd focus on these three:\n\n**1. Turn your 140 subscribers into a referral engine**\nIn a 3 km radius, word of mouth beats ads. Put two \"gift a free first box\" cards in every Saturday delivery. When a friend redeems one, the subscriber gets a free loaf or a pastry add-on.\n- Cost: about €6–8 in ingredients per free box, and you only pay when someone actually tries you.\n- If 1 in 10 subscribers refers a friend each month, that's about 14 trials. If 40% of those stay, you get about 5–6 new subscribers a month. That's €100+ of new weekly revenue for under €120 spent.\n\n**2. Get bread into mouths on Saturday mornings**\nPeople sign up for bread after tasting it, not after seeing a post. Your bike is already out on Saturdays, so add a 1-hour tasting stop at a busy spot in your zone, like a market, park, school sports pitch or playground. Bring warm sourdough, butter, and a QR code offering \"first box half price.\"\n- Two other cheap options are a standing sample basket at a friendly café or coworking space nearby, and paying a little extra for your cargo bike to look striking so it works as a moving ad.\n- Cost: mostly flour and an hour of someone's time.\n\n**3. Lower the commitment to start, and use the holidays**\nA weekly subscription is a big first step. Offer a one-off \"trial box\" or a \"4 Saturdays\" pass so people can try you before committing. It's also late November, so launch a **Christmas gift box** now (stollen or panettone-style bake plus a loaf, with a gift card). Gift buyers and the people who receive the boxes are new local households tasting your product. Put a \"continue for €18/week\" card inside each one.\n\n**One thing to check first:** Are signups flat because few new people hear about you, or because people visit your page and don't convert? If your website or Instagram gets visits but no signups, the fix is the offer and the signup flow (idea 3). If almost nobody new is finding you, start with ideas 1 and 2.",
+  "ttft_ms": 4247,
+  "type": "result",
+  "duration_ms": 13575,
+  "uuid": "cef48a20-fa81-4226-b059-36d59aff3eda",
+  "ttft_stream_ms": 747,
+  "time_to_request_ms": 206,
+  "first_content_frame_ms": 748,
+  "queued_turn_count": 0,
+  "result_index": 0,
+  "credential_expires_at": "2026-12-14T17:15:42.958Z",
+  "cond": "a",
+  "prompt_id": 3,
+  "rep": 2,
+  "prompt": "Our signups are flat. Give me 3 ideas to get more people to try us."
+}

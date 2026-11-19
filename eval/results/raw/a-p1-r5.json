@@ -1,0 +1,106 @@
+{
+  "duration_api_ms": 17646,
+  "stop_reason": "end_turn",
+  "session_id": "3ab0dee3-9e26-4eb5-9961-5c6342c3aaed",
+  "total_cost_usd": 0.0700496,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 5172,
+    "cache_read_input_tokens": 9028,
+    "output_tokens": 1343,
+    "output_tokens_details": {
+      "thinking_tokens": 315
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 5172,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1343,
+        "cache_read_input_tokens": 9028,
+        "cache_creation_input_tokens": 5172,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 5172
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 1343,
+      "cacheReadInputTokens": 9028,
+      "cacheCreationInputTokens": 5172,
+      "webSearchRequests": 0,
+      "costUSD": 0.0700496,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 315,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 5172,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "Your best growth channels are the people who already know your bread: current subscribers and the walk-in customers in your shop. Strangers seeing ads come last. Here's what I'd do, in order:\n\n## 1. Give subscribers a referral offer\nYour 140 subscribers already live within 3 km and have neighbours, colleagues and parents at the school gate.\n- **Offer:** \"Give a friend a free first box, and you get a free box when they stay for 4 weeks.\" Each new subscriber costs you about €36 in bread at cost price or less, and they bring in about €78 a month.\n- **How:** put a printed card in every Saturday box with a short code, or the referrer's name written on it by hand. Hand-written suits a neighbourhood bakery better than an app.\n- Even if only 10% of subscribers refer one person over a quarter, you get about 14 new subscribers for almost no money.\n\n## 2. Turn shop customers into subscribers\nPeople buying a loaf on a Tuesday are your warmest leads.\n- Keep a sign and a sign-up sheet or QR code at the till: \"Never queue on Saturday. Your box, at your door, €18.\"\n- Have the team mention it whenever someone buys sourdough. One sentence is enough.\n- Offer a **4-week trial with no commitment** to lower the barrier.\n\n## 3. Sell Christmas gift subscriptions now\nIt's mid-November, so this is time-sensitive. Sell **gift boxes of 4 or 8 weeks** (€72 / €144) with a nice printed card. Gift recipients are new households in your area who get to try the box, and some will keep paying after it ends. Promote it in the shop, in the subscriber boxes and on Instagram from this week.\n\n## 4. Grow along your existing delivery routes\nNew subscribers on streets you already ride cost almost nothing extra to deliver.\n- Use part of the €300 a month on flyers for letterboxes on those streets, or a door hanger saying \"Your neighbours at no. 12 already get theirs.\" Even with the offer, a door hanger is unaddressed mail, so check your local rules on leaflets: many cities honour \"no advertising\" stickers.\n- Ask local businesses if you can leave flyers with them, such as the coworking space, gym, kindergarten or organic shop. Offices could also take a weekly box for their staff.\n\n## 5. Keep the subscribers you have\nRetention is growth too. Losing 5 subscribers a month quietly cancels out your new sign-ups. Track cancellations, ask everyone who leaves why, and offer a **pause** option instead of cancelling, for holidays and travel.\n\n## Things to check first\n- **Saturday capacity:** how many more boxes can 3 people bake and deliver by bike? If it's about 30, aim for that and start a waitlist after. A waitlist also makes the box more desirable.\n- **Measure each channel:** ask every new subscriber \"how did you hear about us?\" After 2 months, put the €300 into whatever works best.\n\nIf you share your cancellation rate or how many boxes you can deliver on a Saturday, I can turn this into a target and a monthly plan.",
+  "ttft_ms": 5236,
+  "type": "result",
+  "duration_ms": 18209,
+  "uuid": "e6568339-52c1-469a-aa25-e68a20a5225d",
+  "ttft_stream_ms": 1175,
+  "time_to_request_ms": 568,
+  "first_content_frame_ms": 1175,
+  "queued_turn_count": 0,
+  "result_index": 0,
+  "credential_expires_at": "2026-12-14T17:15:42.958Z",
+  "cond": "a",
+  "prompt_id": 1,
+  "rep": 5,
+  "prompt": "How do I get more customers for the bread box?"
+}
