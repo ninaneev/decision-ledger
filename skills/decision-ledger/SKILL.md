@@ -18,8 +18,8 @@ An empty ledger protects nothing. On first use, offer a 10 minute interview:
 
 1. Ask, one question at a time, for the decisions of the last 3 months in
    these areas: offer and pricing, customers, marketing channels, tools,
-   and one personal one. For each: what did you choose, what else was on
-   the table, why did it lose, what would make you reconsider.
+   and one personal one. For each: what did you choose, why that one, what
+   else was on the table, why did each lose, what would make you reconsider.
 2. Stop at 5 decisions or when the user says enough.
 3. Log each one as in §2, with the real date if they remember it, or the
    first day of the month they name. Mark guessed dates `(approx)`.
@@ -49,9 +49,11 @@ plan:
 A decision is made when the user commits to one path ("let's do X", "go with
 B", "approved", "kill it", "park that"). Discarding counts as a decision.
 
-1. Confirm in one line what you are about to log: the decision, the options
-   that lost, and the reason for each. Ask only if a reason is missing; never
-   invent one. If the user gives no reason, write `reason not given`.
+1. Confirm in one line what you are about to log: the decision, why it won,
+   the options that lost, and why each lost. The Why of the decision is its
+   own reason (what makes this path right), not a copy of the discard
+   reasons. Ask once for any missing reason; never invent one. If the user
+   still gives none, write `reason not given`.
 2. Create `ledger/YYYY-MM-DD-<slug>.md` from the format in §5.
 3. Add one row at the TOP of the table in `ledger/DECISIONS.md`.
 4. Tell the user in one line: "Logged: <decision>. Discarded: <options>."
