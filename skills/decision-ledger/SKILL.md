@@ -7,6 +7,7 @@ description: Use when a decision is made or an option is dropped in conversation
 
 The ledger lives in `ledger/` at the project root (or the folder named in
 CLAUDE.md). `ledger/DECISIONS.md` is the index. Every decision has one file.
+If CLAUDE.md names a Notion database as the ledger, follow §7 instead of files.
 
 A memory that only keeps what you chose is half a memory. The other half is
 what you said no to and why. Without it, the AI suggests the same rejected idea
@@ -133,3 +134,31 @@ it must stay readable at a glance.
 - Never paraphrase a reason into something stronger than what was said.
 - The ledger beats your general knowledge. If the user decided against best
   practice, respect it and mention the record, do not re-argue it every time.
+
+## 7. Notion mode
+
+Use this when CLAUDE.md names a Notion database as the ledger, with its data
+source URL (`collection://...`) and a column mapping. Then the Notion MCP
+tools replace the files. Every rule above still holds. The mapping tells you
+which column plays each role: Decision, Why, Discarded, Reopen only if,
+Status, Revisit, Area, Supersedes, Superseded by. Use the user's column names
+and option values exactly as mapped.
+
+- Guard: before you recommend anything, fetch the data source once per
+  session for the schema, then query the rows (decision rows only if the
+  mapping names a type filter). Scan Decision, Discarded and Reopen only if.
+  If the query fails, say so and do not recommend as if the ledger were empty.
+- Log: create one row with the decision as the title, Why, Discarded (one
+  line per option: `<option>: <why it lost>`), Reopen only if, Status,
+  Revisit date and Area. Plus any defaults the CLAUDE.md block sets, such as
+  an approval column. Then read the row back and tell the user in one line,
+  with its link.
+- Recall: search or query the rows by keyword in Decision and Discarded, and
+  cite the row link and its date.
+- Supersede: create the new row first with Supersedes pointing to the old
+  one. Then on the old row change only Status (to the mapped superseded
+  value) and Superseded by. Never delete a row, never rewrite its text.
+- Revisit: at session start, query rows whose Revisit date has passed and
+  mention them once in one line.
+
+Setup and a ready CLAUDE.md block: `setup/notion.md` in the repo.

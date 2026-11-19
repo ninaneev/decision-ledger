@@ -193,7 +193,7 @@ Has the reopen condition for the free tier been met?
 
 ## Your data
 
-Your ledger is plain markdown in your own folder. There is no account, no server and no database. Nothing leaves your computer beyond what your AI tool already sees in a normal session. You can read it, edit it, put it in git or delete it at any time.
+Your ledger is plain markdown in your own folder. There is no account, no server and no database (unless you choose Notion mode, then it lives in your own Notion workspace). Nothing leaves your computer beyond what your AI tool already sees in a normal session. You can read it, edit it, put it in git or delete it at any time.
 
 ---
 
@@ -215,7 +215,7 @@ The old decision is marked `superseded` and linked to the new one. Nothing is de
 Put the `ledger/` folder in your shared repo. Everyone's AI then reads the same decisions, which is also a quick way to onboard someone new.
 
 **Does it work with Notion?**
-Not yet. A Notion version is on the roadmap below.
+Yes. Create one database, paste a block into your `CLAUDE.md`, and the skill reads and writes rows through the Notion MCP tools instead of files. See [`setup/notion.md`](setup/notion.md).
 
 ---
 
@@ -223,7 +223,7 @@ Not yet. A Notion version is on the roadmap below.
 
 - [x] Claude Code skill with seed, log, guard, recall and revisit
 - [x] Claude.ai and ChatGPT Projects version
-- [ ] Notion database version
+- [x] Notion database version
 - [ ] Weekly review prompt that lists decisions due for a revisit
 - [ ] More example ledgers (agency, solo consultant, product team)
 
@@ -239,6 +239,7 @@ Ideas and bug reports are welcome in [Issues](../../issues).
 | [`ledger/DECISIONS.md`](ledger/DECISIONS.md) | Your empty ledger index |
 | [`setup/CLAUDE-snippet.md`](setup/CLAUDE-snippet.md) | Paste into CLAUDE.md so the guard always runs |
 | [`setup/claude-ai-and-chatgpt.md`](setup/claude-ai-and-chatgpt.md) | Version for Claude.ai and ChatGPT Projects |
+| [`setup/notion.md`](setup/notion.md) | Keep the ledger in a Notion database |
 | [`examples/`](examples/) | Three filled records and their index |
 
 ---
