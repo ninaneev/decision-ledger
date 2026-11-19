@@ -1,6 +1,8 @@
 # Keep the ledger in Notion
 
-Same skill, same rules. The decisions live in a Notion database instead of markdown files. You need Claude Code with the Notion MCP connected.
+Same skill, same rules. The decisions live in a Notion database instead of markdown files. You need the Notion connector (MCP) added to your AI tool once. No share link is needed.
+
+No database yet and happy to let the skill build it? Use the short path in [`storage.md`](storage.md#notion). This page is for building it yourself, or for using a database you already have.
 
 ## 1. Create the database (2 minutes)
 
@@ -12,7 +14,9 @@ New page in Notion, type `/database`, call it `Decision Ledger`, and add these c
 | Why | Text | Why this one won, in your words |
 | Discarded | Text | One line per option that lost: `option: why it lost` |
 | Reopen only if | Text | What must happen before a discarded option comes back |
+| Reversible | Select: yes, no | Whether it can be undone cheaply |
 | Status | Select: open, active, superseded, reversed | Where it stands |
+| Type | Select: decision, invariant | Invariants are rules you never break |
 | Area | Select: pricing, product, marketing, tools, hiring, personal | One word you would search for |
 | Revisit | Date | When to look at it again |
 | Supersedes | Relation to this same database | The older decision this one replaces |
@@ -31,7 +35,7 @@ Ask Claude: "fetch my Decision Ledger database in Notion and tell me its data so
 
 ## Decision Ledger (Notion mode)
 
-My decision ledger is a Notion database. Use the decision-ledger skill in Notion mode (§7), not files.
+My decision ledger is a Notion database. Use the decision-ledger skill in Notion mode (§7, Storage modes), not files.
 
 - Data source: collection://PASTE-YOUR-ID-HERE
 - Column mapping:
@@ -41,10 +45,12 @@ My decision ledger is a Notion database. Use the decision-ledger skill in Notion
   - Reopen only if = "Reopen only if"
   - Status = "Status" (open = "open", active = "active", superseded = "superseded", reversed = "reversed")
   - Area = "Area"
+  - Reversible = "Reversible"
+  - Type = "Type" (decision = "decision", invariant = "invariant")
   - Revisit = "Revisit"
   - Supersedes = "Supersedes"
   - Superseded by = "Superseded by"
-- Before recommending any strategy, tool, price, name, channel or plan, query the rows and check Discarded. If the idea was discarded, tell me the date, the reason and the reopen condition instead of suggesting it again.
+- Before recommending any strategy, tool, price, name, channel or plan, query the rows and check invariant rows, Discarded and Reversible. If the idea was discarded, tell me the date, the reason and the reopen condition instead of suggesting it again.
 - When I commit to something or drop an option, log a row, including what was discarded and why.
 - Never delete a row. A change of mind is a new row that supersedes the old one.
 - At the start of a session, tell me in one line if a Revisit date has passed.
@@ -63,4 +69,4 @@ Your columns have other names? Change only the right side of the mapping. Exampl
 
 The last line is how you add your own defaults, for example an approval column that only you may change.
 
-Unlike the file version, the index is not imported into every session. The guard runs a query instead, so keep the CLAUDE.md block: it is what makes the check happen.
+Unlike the file version, the index is not imported into every session. The guard runs a query instead, so keep the CLAUDE.md block. It is what makes the check happen.

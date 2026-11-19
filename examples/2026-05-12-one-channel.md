@@ -1,19 +1,22 @@
-# Post on TikTok only for 90 days
+# Grow through building lobbies only for 90 days
+
+> Fictional example. Little Oven is a made up neighbourhood bakery that delivers bread and pastries by bike.
 
 Date: 2026-05-12
 Status: active
 Area: marketing
+Reversible: yes
 Revisit: 2026-08-12
 
 ## Decision
-One channel. Daily TikTok for 90 days. Instagram paused.
+One channel. A free tasting box and a printed card in the lobby of every apartment building within 1 km, two buildings a week, for 90 days. No food delivery apps.
 
 ## Why
-Posting the same video on three apps took 2 hours a day and none of them grew. TikTok gave 80% of our profile visits.
+Every box subscriber so far lives in a building where we already deliver. Neighbours tell neighbours, and one tasting box costs us €4.
 
 ## Discarded
-- Instagram Reels: 6% of profile visits for the same effort. Reopen only if: TikTok passes 5,000 followers and reposting takes under 15 minutes.
-- YouTube Shorts: no buyer has ever said they found us there. Reopen only if: a customer names YouTube as their source.
+- Food delivery apps: they take 30% of each order and customers become theirs. Reopen only if: a second bakery opens within 1 km.
+- Paid local ads: we tried €50 and could not tell if anyone came from them. Reopen only if: we can track a code per ad.
 
 ## Supersedes
 (none)
