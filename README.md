@@ -4,14 +4,14 @@
 
 ### Your AI remembers what you said. It forgets what you said no to.
 
-A free skill that gives Claude and ChatGPT a memory of your **decisions**, including the ideas you already rejected, why you rejected them, and what would make you look again.
+A free skill that gives your AI a memory of your **business decisions** (pricing, channels, offers, hires), including the ideas you already rejected, why you rejected them, and what would make you look again.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-9C83F7.svg)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-9C83F7.svg)](#install-in-claude-code)
-[![Claude.ai and ChatGPT](https://img.shields.io/badge/Claude.ai%20%26%20ChatGPT-projects-9C83F7.svg)](#use-it-in-claudeai-or-chatgpt)
-[![Plain markdown](https://img.shields.io/badge/your%20data-plain%20markdown-9C83F7.svg)](#your-data)
+[![Works with](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Codex%20%C2%B7%20Cursor%20%C2%B7%20more-9C83F7.svg)](#works-with)
+[![Storage](https://img.shields.io/badge/storage-markdown%20%C2%B7%20Notion%20%C2%B7%20Airtable%20%C2%B7%20sheets-9C83F7.svg)](#pick-where-it-lives)
 
-**[Install in 10 minutes](#install-in-claude-code)** · **[See a real record](examples/2026-03-02-pricing-model.md)** · **[How it works](#how-it-works)**
+**[Install in 10 minutes](#install-in-claude-code)** · **[Let your AI install it](#let-your-ai-install-it)** · **[See an example record](examples/2026-04-20-bread-box.md)** · **[How it works](#how-it-works)**
 
 </div>
 
@@ -19,21 +19,25 @@ A free skill that gives Claude and ChatGPT a memory of your **decisions**, inclu
 
 ## The problem
 
-You decided against a free tier in March. You had good reasons.
+You decided against the food delivery apps in May. You had good reasons.
 
-In May your AI suggests a free tier. You explain again. In July it suggests it again, phrased a little differently. Every few weeks you argue with your own past self, and the AI takes the side of whoever spoke last.
+In June your AI suggests the delivery apps. You explain again. In August it suggests them again, phrased a little differently. Every few weeks you argue with your own past self, and the AI takes the side of whoever spoke last.
 
 AI memory keeps what you said. It rarely keeps what you **ruled out**, and it never keeps the condition under which you would change your mind. That missing half is where the loop comes from.
 
 ## The fix
 
-```
-You:    We get 11 paid signups a month. How should I grow this?
+The exchange below is a fictional example, about a made up bakery called Little Oven.
 
-Claude: I'd usually suggest a free tier, but you discarded that on 2026-03-02.
-        Free users never upgraded in your last product. You said you'd only
-        reopen it if paid signups stall below 5 a month for 2 months.
-        At 11 a month that hasn't happened, so here's what I'd do instead...
+```
+You:    Orders are flat at 140 a week. How do we grow?
+
+Claude: I'd usually suggest the food delivery apps, but you discarded them
+        on 2026-05-12. They take 30% of each order and the customers become
+        theirs. You said you'd only reopen that if a second bakery opens
+        within 1 km. That hasn't happened.
+        One fixed point first. The corner kitchen lease (2026-06-03) can't
+        be undone, so every idea below has to fit that one oven...
 ```
 
 Decision Ledger keeps a short record of every decision and every option that lost, with the reason and a **"reopen only if"** condition. Your AI reads it before it recommends anything.
@@ -58,67 +62,121 @@ It does five things.
 
 | | What it does | You say | It does |
 |---|---|---|---|
-| 🌱 | **Seed** | `/decision-ledger seed` | Interviews you for 10 minutes, one question at a time, about your last 5 real decisions, so the ledger protects you from day one |
-| ✍️ | **Log** | "let's go with B", "drop that", "park it" | Confirms in one line, asks for any missing reason (never invents one), writes the record, adds a row to the index |
-| 🛡️ | **Guard** | nothing, it runs on its own | Before recommending a price, tool, channel, name or plan, checks what you discarded and tells you instead of re-pitching it |
-| 🔎 | **Recall** | "why did we pick €39?", "did we already try Instagram?" | Answers with the date and the reason in your own words. If nothing is logged, it says so and does not guess |
+| 🌱 | **Seed** | `/decision-ledger seed` | Interviews you for 10 minutes, one question at a time, about your last 5 real decisions and the rules you never break, so the ledger protects you from day one |
+| ✍️ | **Log** | "let's go with B", "drop that", "park it" | Confirms in one line, asks for any missing reason (never invents one) and whether it can be undone, writes the record, adds a row to the index |
+| 🛡️ | **Guard** | nothing, it runs on its own | Before recommending a price, tool, channel, offer, hire or plan, checks your invariants and what you discarded, and tells you instead of re-pitching it. Irreversible decisions are always named first |
+| 🔎 | **Recall** | "why did we pick the bread box?", "did we already try ads?" | Answers with the date and the reason in your own words. If nothing is logged, it says so and does not guess |
 | 🔁 | **Revisit** | "what's due for a revisit?" | Flags decisions whose revisit date has passed. When you change your mind, the old decision stays, marked superseded, so you can see how your thinking moved |
 
 ### Why it actually works
 
 An instruction like "check my decisions first" gets skipped the moment a question looks simple. So the ledger does not rely on the AI remembering to look.
 
-One line in your `CLAUDE.md` loads the decision index into **every** session. The check costs nothing and cannot be skipped. That is also why the index stays short, one row per decision, short names in the Discarded column.
+One line in your `CLAUDE.md` loads the decision index into **every** session. The check costs nothing and cannot be skipped. That is also why the index stays short, one row per decision, short names in the Discarded column. Past about 40 rows the skill offers to move old superseded rows into `ledger/ARCHIVE.md`.
+
+Want it enforced even after long sessions get compacted? Add the optional [SessionStart hook](setup/CLAUDE-snippet.md#optional-enforce-it-with-a-sessionstart-hook). It prints the index into Claude's context at every start, `/clear` and compaction.
 
 ---
 
 ## What a record looks like
 
-Each decision is one small markdown file. This is the heart of it.
+Each decision is one small markdown file. The format is a light version of [MADR](https://adr.github.io/madr/), the Markdown Architecture Decision Record, cut down for business decisions. This is a fictional example.
 
 ```markdown
-# Charge a flat €29 a month, no free tier
+# Sell a weekly bread box at €18, delivery included
 
-Date: 2026-03-02
-Status: superseded
-Area: pricing
-Revisit: 2026-06-01 or when we pass 50 customers
+Date: 2026-04-20
+Status: active
+Area: offer
+Reversible: yes
+Revisit: 2026-07-20
 
 ## Decision
-One plan, €29 a month, cancel any time. No free tier.
+A weekly box of two loaves and four pastries for €18, delivered
+every Saturday morning. Single orders stay at €3 delivery.
 
 ## Why
-Our buyers are solo coaches. In 6 sales calls, 4 asked "how much is it
-for just me". Per seat pricing made them do maths before they saw the product.
+Most orders were the same three items every week. A fixed Saturday
+route lets one rider do 30 drops in two hours, and we bake to a
+known number with almost no waste.
 
 ## Discarded
-- Per seat pricing: scared off solo buyers in calls.
-  Reopen only if: a team of 5 or more asks for it.
-- Free tier: support load with no revenue, free users never upgraded.
-  Reopen only if: paid signups stall below 5 a month for 2 months.
-- Lifetime deal: cash now, support forever.
-  Reopen only if: we need runway in under 30 days.
+- Keep only single orders: riders crossed the same street five times a day.
+  Reopen only if: box subscribers drop below 20.
+- Daily box: we cannot bake that much before 7am with one oven.
+  Reopen only if: we get a second oven.
 
-Superseded by: 2026-04-20-price-39.md
+## Supersedes
+2026-03-02-pricing-model.md
 ```
 
-And the index your AI reads every session:
+And the index your AI reads every session (fictional example)
 
-| Date | Decision | Discarded | Status | Revisit | Record |
-|---|---|---|---|---|---|
-| 2026-05-12 | Instagram paused, TikTok only | Instagram Reels, YouTube Shorts | active | 2026-08-12 | [record](examples/2026-05-12-one-channel.md) |
-| 2026-04-20 | Flat €39/month, annual €390 | €29/month, per seat | active | 2026-07-20 | [record](examples/2026-04-20-price-39.md) |
-| 2026-03-02 | Flat €29/month | per seat, free tier, lifetime deal | superseded | 2026-06-01 | [record](examples/2026-03-02-pricing-model.md) |
+**Invariants** are rules that must never be broken. The guard checks them first.
 
-The three examples follow a made up coaching app that set a price, raised it seven weeks later and paused Instagram. Read them in order to see how a decision changes without losing its history.
+| Since | Rule | Why |
+|---|---|---|
+| 2026-03-02 | Bread goes out the same day it is baked | Fresh bread at the door is the whole promise |
+| 2026-03-02 | No customer addresses outside our own list | Neighbours trust us with their door codes |
+
+**Decisions**
+
+| Date | Decision | Discarded | Reversible | Status | Revisit | Record |
+|---|---|---|---|---|---|---|
+| 2026-06-03 | 3 year lease on the corner kitchen | shared kitchen across town, home kitchen | no | active | 2027-06-03 | [record](examples/2026-06-03-kitchen-lease.md) |
+| 2026-05-12 | Building lobbies only, 90 days | food delivery apps, paid local ads | yes | active | 2026-08-10 | [record](examples/2026-05-12-one-channel.md) |
+| 2026-04-20 | Weekly bread box €18, delivery included | single orders only, daily box | yes | active | 2026-07-20 | [record](examples/2026-04-20-bread-box.md) |
+| 2026-03-02 | €3 delivery fee per order | free delivery over €25, free delivery, loyalty card | yes | superseded | 2026-06-01 | [record](examples/2026-03-02-pricing-model.md) |
+
+The four examples follow Little Oven, a made up neighbourhood bakery that delivers by bike. It set a delivery fee, replaced it with a bread box seven weeks later, picked one marketing channel and signed a lease it cannot undo. Read them in order to see how a decision changes without losing its history.
 
 **Statuses** `open` still deciding · `active` in force · `superseded` replaced by a newer decision · `reversed` undone
+
+**Reversible** `yes` cheap to undo · `no` costs real money, time or trust to undo. The guard names every `no` before suggesting anything in the same area.
+
+---
+
+## Works with
+
+| Tool | How | Setup |
+|---|---|---|
+| Claude Code | Skill + `CLAUDE.md` import, optional hook | [below](#install-in-claude-code) |
+| Claude.ai Projects | Project instructions + knowledge file | [`claude-ai-and-chatgpt.md`](setup/claude-ai-and-chatgpt.md) |
+| ChatGPT Projects | Project instructions + project file | [`claude-ai-and-chatgpt.md`](setup/claude-ai-and-chatgpt.md) |
+| ChatGPT custom GPT | Instructions + knowledge file (OpenAI is retiring custom GPTs, see the file) | [`claude-ai-and-chatgpt.md`](setup/claude-ai-and-chatgpt.md#chatgpt-custom-gpt) |
+| OpenAI Codex CLI | Skill + `AGENTS.md` | [`other-tools.md`](setup/other-tools.md#openai-codex-cli) |
+| Gemini CLI | Skill + `GEMINI.md` | [`other-tools.md`](setup/other-tools.md#gemini-cli) |
+| Cursor | Skill + rule file or `AGENTS.md` | [`other-tools.md`](setup/other-tools.md#cursor) |
+| Cline | Skill + `.clinerules/` | [`other-tools.md`](setup/other-tools.md#cline) |
+| Windsurf (now Devin Local) | Skill + `AGENTS.md` | [`other-tools.md`](setup/other-tools.md#windsurf-now-devin-local) |
+| OpenClaw | Skill + workspace `AGENTS.md` | [`other-tools.md`](setup/other-tools.md#openclaw) |
+
+## Pick where it lives
+
+| Backend | Needs | Setup |
+|---|---|---|
+| Markdown files (default) | Nothing | this README |
+| Notion | Notion connector, once. The skill can create the database for you | [`storage.md`](setup/storage.md#notion) |
+| Airtable | Airtable connector, once. The skill can create the table for you | [`storage.md`](setup/storage.md#airtable) |
+| Spreadsheet (CSV, Excel, Google Sheets) | A file. A Google Sheets connector is optional | [`storage.md`](setup/storage.md#spreadsheet) |
+
+---
+
+## Let your AI install it
+
+Open Claude Code (or Codex, Gemini CLI, Cursor or Cline) in your project folder and paste this line.
+
+```
+Install the Decision Ledger for me. Follow INSTALL-AGENT.md from https://github.com/ninaneev/decision-ledger
+```
+
+It asks you three questions, installs the skill, adds the ledger and the guard, and prints a checklist. The runbook it follows is [`INSTALL-AGENT.md`](INSTALL-AGENT.md).
 
 ---
 
 ## Install in Claude Code
 
-About 10 minutes. Run these from the folder where you downloaded this repo.
+About 10 minutes. Download this repo, open a terminal in the downloaded folder, and run the commands from there.
 
 **1. Copy the skill**
 
@@ -136,13 +194,53 @@ New-Item -ItemType Directory -Force $HOME\.claude\skills\decision-ledger; Copy-I
 
 **2. Add an empty ledger to your project**
 
-Copy the `ledger/` folder into your project folder.
+The `ledger/` folder is where your decisions are stored. It holds one file to start with, `DECISIONS.md`, the index your AI reads every session. Right now it has only its headers (an empty Invariants table and an empty Decisions table). Each decision you log later adds one row there and one small record file next to it.
 
-> Want one ledger for all your projects? Put `ledger/` in your home folder and follow the full path note at the end of [`setup/CLAUDE-snippet.md`](setup/CLAUDE-snippet.md).
+Your **project folder** is the folder you open Claude Code in, the one where you type `claude`. Put `ledger/` directly inside it, next to your `CLAUDE.md`.
+
+```
+my-business/                  ← your project folder (where you start Claude Code)
+├── CLAUDE.md                 ← step 3 adds the guard here
+├── ledger/                   ← copied in this step
+│   └── DECISIONS.md          ← the index, empty until you seed it
+└── ...your other files
+```
+
+After a few weeks it looks like this.
+
+```
+my-business/ledger/
+├── DECISIONS.md
+├── 2026-04-20-bread-box.md
+└── 2026-05-12-one-channel.md
+```
+
+From the terminal (still in the downloaded repo folder)
+
+macOS or Linux
+```bash
+cp -r ledger /path/to/my-business/
+```
+
+Windows (PowerShell)
+```powershell
+Copy-Item -Recurse ledger C:\path\to\my-business\
+```
+
+By hand, copy the `ledger` folder from the download and paste it into your project folder. Or create a folder called `ledger` there and save [`ledger/DECISIONS.md`](ledger/DECISIONS.md) inside it.
+
+It starts empty on purpose. Step 4 fills it.
+
+| Option | Where `ledger/` goes | Good for |
+|---|---|---|
+| One ledger per project (default) | Inside each project folder | Separate businesses or clients that should not mix |
+| One shared ledger | Your home folder, for example `~/ledger/` | One business you work on from several folders. Use the full path in `CLAUDE.md`, see [`CLAUDE-snippet.md`](setup/CLAUDE-snippet.md) |
+
+> Using a chat tool (Claude.ai, ChatGPT) or keeping the ledger in Notion, Airtable or a sheet? Skip this step. Your backend setup replaces it, see [Works with](#works-with) and [Pick where it lives](#pick-where-it-lives).
 
 **3. Make the guard run every session**
 
-Open the `CLAUDE.md` in your project folder (create an empty one if you have none) and paste the block from [`setup/CLAUDE-snippet.md`](setup/CLAUDE-snippet.md).
+Open the `CLAUDE.md` in your project folder (create an empty one if you have none) and paste the block from [`setup/CLAUDE-snippet.md`](setup/CLAUDE-snippet.md). The same file has the optional SessionStart hook.
 
 **4. Seed it**
 
@@ -161,7 +259,7 @@ It interviews you about your last 5 real decisions. An empty ledger protects not
 No terminal needed. You keep one file and the AI reads it in every chat.
 
 1. Create a **Project** in Claude.ai or ChatGPT.
-2. Upload `ledger/DECISIONS.md` as project knowledge.
+2. Upload `ledger/DECISIONS.md` as project knowledge (Claude.ai) or a project file (ChatGPT).
 3. Paste the instructions from [`setup/claude-ai-and-chatgpt.md`](setup/claude-ai-and-chatgpt.md).
 4. Paste the seed prompt from the same file to fill it with your last 5 decisions.
 
@@ -171,29 +269,38 @@ The AI cannot write files here, so when it logs a decision it hands you a ready 
 
 ## Everyday use
 
-Just talk the way you already do. A few things worth knowing:
+Just talk the way you already do. A few things worth knowing.
 
 - **Ideas are not decisions.** It only logs what you commit to ("let's do it", "approved", "kill it", "park that"). Brainstorming stays out of the ledger.
 - **Discarding counts.** "Drop the podcast idea" is a decision, and the most valuable kind to keep.
 - **No reason, no invention.** If you do not say why, it asks once. If you still do not say, it writes `reason not given` rather than making one up.
+- **Some things cannot be undone.** A lease, a hire or a public promise gets `Reversible: no`, and the AI names it before suggesting anything nearby.
+- **Some rules never bend.** Put them in Invariants. The AI will not suggest breaking them.
 - **Absolute dates only.** "Last week" means nothing in two months.
 - **Disagreeing is allowed.** If the AI thinks an active decision is wrong, it must name the decision first and then make its case. It never works around it quietly.
 
 Good questions to ask
 
 ```
-Why did we pick €39?
-Did we already try Instagram?
+Why did we pick the bread box?
+Did we already try paid ads?
 What did we discard about pricing?
+What can't we undo?
 What's due for a revisit?
-Has the reopen condition for the free tier been met?
+Has the reopen condition for the delivery apps been met?
 ```
+
+---
+
+## Does it work?
+
+A small public test is being built now. It runs the same business questions with and without the ledger and counts how often the AI re-suggests something already rejected. Results and a short demo GIF are coming to this section.
 
 ---
 
 ## Your data
 
-Your ledger is plain markdown in your own folder. There is no account, no server and no database (unless you choose Notion mode, then it lives in your own Notion workspace). Nothing leaves your computer beyond what your AI tool already sees in a normal session. You can read it, edit it, put it in git or delete it at any time.
+With the default setup your ledger is plain markdown in your own folder. There is no account and no server. Choose Notion, Airtable or a sheet and it lives in your own workspace there. Nothing leaves your computer beyond what your AI tool already sees in a normal session. You can read it, edit it, put it in git or delete it at any time.
 
 ---
 
@@ -202,8 +309,11 @@ Your ledger is plain markdown in your own folder. There is no account, no server
 **Doesn't Claude or ChatGPT memory already do this?**
 Built in memory keeps facts about you. It does not keep which options you rejected, why, or under what condition you would reconsider, and it does not stop the AI from suggesting them. The ledger does exactly that one thing.
 
+**How is this different from selvedge or ADR tools?**
+Tools like [selvedge](https://github.com/masondelan/selvedge) and [adr-kit](https://github.com/rvdbreemen/adr-kit) are built for coding decisions and you install them as software. Decision Ledger is for business decisions such as pricing, channels, offers and hires. It works with no install at all in chat tools, and it can keep the ledger in markdown, Notion, Airtable or a spreadsheet. Its record format is a light version of [MADR](https://adr.github.io/madr/).
+
 **Will it slow my sessions down?**
-The index is one short table. Your AI reads it in a moment, and opens a full record only when it needs the reason.
+The index is one short table. Your AI reads it in a moment, and opens a full record only when it needs the reason. When it grows past about 40 rows, the skill offers to move old superseded rows to `ledger/ARCHIVE.md`.
 
 **Can I use one ledger across several projects?**
 Yes. Put the folder in your home directory and use the full path in your `CLAUDE.md`. See [`setup/CLAUDE-snippet.md`](setup/CLAUDE-snippet.md).
@@ -212,10 +322,10 @@ Yes. Put the folder in your home directory and use the full path in your `CLAUDE
 The old decision is marked `superseded` and linked to the new one. Nothing is deleted or rewritten to look like it was always right. The trail is the point.
 
 **Does it work for a team?**
-Put the `ledger/` folder in your shared repo. Everyone's AI then reads the same decisions, which is also a quick way to onboard someone new.
+Put the `ledger/` folder in your shared repo, or share the Notion database, Airtable base or sheet. Everyone's AI then reads the same decisions, which is also a quick way to onboard someone new.
 
-**Does it work with Notion?**
-Yes. Create one database, paste a block into your `CLAUDE.md`, and the skill reads and writes rows through the Notion MCP tools instead of files. See [`setup/notion.md`](setup/notion.md).
+**Does it work with Notion, Airtable or a spreadsheet?**
+Yes. Name the backend in your `CLAUDE.md` or instructions. With Notion or Airtable connected, the skill can even create the database for you. See [`setup/storage.md`](setup/storage.md).
 
 ---
 
@@ -223,7 +333,13 @@ Yes. Create one database, paste a block into your `CLAUDE.md`, and the skill rea
 
 - [x] Claude Code skill with seed, log, guard, recall and revisit
 - [x] Claude.ai and ChatGPT Projects version
-- [x] Notion database version
+- [x] Notion database version, with create or map
+- [x] Airtable and spreadsheet versions
+- [x] Codex CLI, Gemini CLI, Cursor, Cline, Windsurf and OpenClaw setup
+- [x] Reversible field and Invariants
+- [x] Optional SessionStart hook for Claude Code
+- [x] Install runbook an AI agent can follow
+- [ ] Public test results and demo GIF
 - [ ] Weekly review prompt that lists decisions due for a revisit
 - [ ] More example ledgers (agency, solo consultant, product team)
 
@@ -235,12 +351,16 @@ Ideas and bug reports are welcome in [Issues](../../issues).
 
 | Path | What it is |
 |---|---|
-| [`skills/decision-ledger/SKILL.md`](skills/decision-ledger/SKILL.md) | The skill Claude Code follows |
+| [`skills/decision-ledger/SKILL.md`](skills/decision-ledger/SKILL.md) | The skill your AI follows |
 | [`ledger/DECISIONS.md`](ledger/DECISIONS.md) | Your empty ledger index |
-| [`setup/CLAUDE-snippet.md`](setup/CLAUDE-snippet.md) | Paste into CLAUDE.md so the guard always runs |
-| [`setup/claude-ai-and-chatgpt.md`](setup/claude-ai-and-chatgpt.md) | Version for Claude.ai and ChatGPT Projects |
-| [`setup/notion.md`](setup/notion.md) | Keep the ledger in a Notion database |
-| [`examples/`](examples/) | Three filled records and their index |
+| [`INSTALL-AGENT.md`](INSTALL-AGENT.md) | Runbook an AI agent follows to install everything |
+| [`setup/CLAUDE-snippet.md`](setup/CLAUDE-snippet.md) | Paste into CLAUDE.md so the guard always runs, plus the optional hook |
+| [`setup/session-start-hook.json`](setup/session-start-hook.json) | Ready Claude Code settings file with the hook |
+| [`setup/claude-ai-and-chatgpt.md`](setup/claude-ai-and-chatgpt.md) | Claude.ai Projects, ChatGPT Projects and custom GPT |
+| [`setup/other-tools.md`](setup/other-tools.md) | Codex CLI, Gemini CLI, Cursor, Cline, Windsurf, OpenClaw |
+| [`setup/storage.md`](setup/storage.md) | Markdown, Notion, Airtable or a spreadsheet |
+| [`setup/notion.md`](setup/notion.md) | Build or map your own Notion database |
+| [`examples/`](examples/) | Four fictional records and their index |
 
 ---
 
