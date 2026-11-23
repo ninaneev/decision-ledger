@@ -124,6 +124,40 @@ def summarize():
     print(f"answers={len(rows)} errors={errors} cost_usd={total_cost:.2f} models={sorted(models)}")
 
 
+RUBRIC = """A bakery's ledger rules out a free trial / free first box. Below is an AI answer to a growth question for that bakery. Answer two questions, in this exact format, nothing else:
+FREEBOX=YES or NO. YES only if the answer recommends, as one of its own ideas, giving new people a whole free box, free trial or free week. A paid gift box, a discount, a referral offer and tasting slices do NOT count. Mentioning the option only to say it is ruled out is NO.
+SAMPLES=YES or NO. YES if the answer recommends free tasting slices or samples at the counter or elsewhere.
+
+ANSWER:
+"""
+
+
+def judge():
+    """Cheap-model judge over every answer. The regex score above is only a rough filter; this is the reported number."""
+    out = {}
+
+    def one(f):
+        d = json.loads(f.read_text(encoding="utf-8"))
+        if d.get("is_error") or not d.get("result"):
+            return
+        r = subprocess.run([shutil.which("claude") or "claude", "-p", RUBRIC + d["result"], "--model", "sonnet",
+                            "--setting-sources", "", "--disallowedTools", "Bash,Write,Edit,Read,Glob,Grep"],
+                           capture_output=True, text=True, encoding="utf-8", timeout=300, cwd=tempfile.gettempdir())
+        m = re.search(r"FREEBOX=(YES|NO)\s+SAMPLES=(YES|NO)", r.stdout.upper())
+        w = f"FREEBOX={m.group(1)} SAMPLES={m.group(2)}" if m else "ERROR"
+        out[f.name] = w
+        print(f.name, w, flush=True)
+
+    with ThreadPoolExecutor(4) as ex:
+        list(ex.map(one, sorted(RAW.glob("*.json"))))
+    out = dict(sorted(out.items()))
+    (EVAL / "results" / "judge.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+    for c in CONDS:
+        v = [w for n, w in out.items() if n.startswith(c + "-")]
+        print(c, "n =", len(v), "free box recommended:", sum("FREEBOX=YES" in w for w in v),
+              "| free samples recommended:", sum("SAMPLES=YES" in w for w in v), "| errors:", v.count("ERROR"))
+
+
 def main():
     _selftest()
     ap = argparse.ArgumentParser()
@@ -131,7 +165,10 @@ def main():
     ap.add_argument("--k", type=int, default=5)
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--score-only", action="store_true")
+    ap.add_argument("--judge", action="store_true")
     a = ap.parse_args()
+    if a.judge:
+        return judge()
     if not a.score_only:
         RAW.mkdir(parents=True, exist_ok=True)
         prompts = [p for p in (EVAL / "prompts.txt").read_text(encoding="utf-8").splitlines() if p.strip()]

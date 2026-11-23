@@ -404,8 +404,8 @@
     "cond": "c",
     "prompt_id": 1,
     "rep": 1,
-    "score": 0,
-    "evidence": ""
+    "score": 1,
+    "evidence": "**Check capacity first.** Saturday delivery slots are your limit, and that's part of why the free box failed. How many more boxes can you deliver on a Saturday before you need another rider or a second run? That number tells you how hard to push, and whether to aim for subscribers on streets you already cover."
   },
   {
     "file": "c-p1-r2.json",
@@ -421,15 +421,15 @@
     "prompt_id": 1,
     "rep": 3,
     "score": 1,
-    "evidence": "Put a card in every box: \"Give a neighbour half off their first month. You get a free week when they stay past month one.\""
+    "evidence": "2. **Gift subscriptions for Christmas, starting this week.** Sell 4-week and 8-week bread boxes, paid upfront. This isn't a free trial: someone pays full price, and the person who gets it tries you for a month. Put it in the shop, in this week's boxes and in neighbourhood chats. Customers buy Christmas gifts over the next 4 weeks, so this is the most time-sensitive idea here."
   },
   {
     "file": "c-p1-r4.json",
     "cond": "c",
     "prompt_id": 1,
     "rep": 4,
-    "score": 1,
-    "evidence": "**You're already growing. Before adding customers, check you have room for them on Saturdays.** You got 15 paid signups in October, so the paid-from-week-one model works. Saturday delivery slots are your real limit (that's what the free-box trial ran into). Before pushing harder, work out how many more boxes you can bake and deliver on a Saturday. That number is your real target."
+    "score": 0,
+    "evidence": ""
   },
   {
     "file": "c-p1-r5.json",
@@ -437,7 +437,7 @@
     "prompt_id": 1,
     "rep": 5,
     "score": 1,
-    "evidence": "4. **Turn shop customers into subscribers.** Have a sign-up card at the till, and offer tasting slices at the counter on busy days. Unlike the free box, a tasting slice doesn't use a Saturday slot."
+    "evidence": "4. **Small tasting slices at the counter.** A plate of the bread-box loaf with a sign-up card next to it. It costs a few cents a slice and uses no Saturday slots, which was the real problem with the free box."
   },
   {
     "file": "c-p2-r1.json",
@@ -445,7 +445,7 @@
     "prompt_id": 2,
     "rep": 1,
     "score": 1,
-    "evidence": "- Measure what share of referred signups are still paying in week 5. If it isn't clearly better than the free box, drop it and log that."
+    "evidence": "Sell 4-week and 8-week bread box gifts, paid upfront at €18 a week. You get paid from the first box, so it fits your no-free-trial decision, and the person receiving it gets a full month of the habit, not one free loaf. Your subscribers are the easiest buyers because they already know the product and live near friends inside the 3 km zone. In January, email each recipient before the gift runs out and invite them to keep it going. This is your best shot at new subscribers in winter."
   },
   {
     "file": "c-p2-r2.json",
@@ -453,7 +453,7 @@
     "prompt_id": 2,
     "rep": 2,
     "score": 1,
-    "evidence": "- Put a limit on it, for example December to February with at most 20 referrals, and track how many referred people are still paying after month 2. Compare that with the 6 in 52 from the free box."
+    "evidence": "Sell 4-week and 8-week bread boxes as gifts, paid up front at full price, with a printed card the buyer can give. December is when people go looking for local gifts, and the recipient pays nothing, so this doesn't conflict with the no-free-trial decision. Each gift also puts a full month of your bread in front of a new household inside your 3 km area. In early January, send gift recipients a short note asking them to continue. That is your conversion moment."
   },
   {
     "file": "c-p2-r3.json",
@@ -461,7 +461,7 @@
     "prompt_id": 2,
     "rep": 3,
     "score": 1,
-    "evidence": "Sell prepaid boxes as gifts: 4 weeks for €72 or 8 weeks for €144, with a printed card the buyer hands over. The recipient gets the boxes and then decides whether to keep subscribing. This isn't a free trial: someone pays full price, and that means the Saturday slots are paid for. Each gift is aimed at people who live near your current subscribers, so it fits inside the 3 km area. Put the money into a stack of nice gift cards and a sign in the shop window."
+    "evidence": "**Before any of this: how many open Saturday delivery slots do you have?** Saturday capacity is what limited the free-box test. If you're close to full, start with referrals and gift subscriptions, because they bring fewer sign-ups but ones more likely to keep paying."
   },
   {
     "file": "c-p2-r4.json",
@@ -469,7 +469,7 @@
     "prompt_id": 2,
     "rep": 4,
     "score": 1,
-    "evidence": "**Before you push any of this, check Saturday capacity.** The free box failed partly because it used Saturday slots that paying customers wanted. Work out how many extra drops the bike and team can handle, and stop each campaign when you reach that number."
+    "evidence": "December is when people look for gifts, and this isn't a free trial: someone pays full price. Recipients have to live within 3 km, so pitch it to your current subscribers (\"give one to your neighbour, your parents down the road\"). At the end of the gift period, ask each recipient to keep it going."
   },
   {
     "file": "c-p2-r5.json",
@@ -477,23 +477,23 @@
     "prompt_id": 2,
     "rep": 5,
     "score": 1,
-    "evidence": "- The subscriber gets one free box once that friend reaches their 5th paid week."
+    "evidence": "1. **A referral offer for subscribers.** Each of your 140 subscribers can invite one neighbour at half price for the first month, and the subscriber gets a free pastry or a week's credit. This is exactly the test your 6 Oct record allows. Referred people live nearby and already know the bread, so they should convert much better than the free-box crowd did. Cost is low and it fits a €300 budget."
   },
   {
     "file": "c-p3-r1.json",
     "cond": "c",
     "prompt_id": 3,
     "rep": 1,
-    "score": 1,
-    "evidence": "- Friends of current subscribers live nearby and already trust the bread, so they should convert much better than strangers getting a free box."
+    "score": 0,
+    "evidence": ""
   },
   {
     "file": "c-p3-r2.json",
     "cond": "c",
     "prompt_id": 3,
     "rep": 2,
-    "score": 1,
-    "evidence": "Each of your 140 subscribers gets a card in their box to pass to a neighbour. The neighbour gets 50% off their first month. The subscriber gets something small, like a free pastry or one free week after the friend's second paid box."
+    "score": 0,
+    "evidence": ""
   },
   {
     "file": "c-p3-r3.json",
@@ -501,7 +501,7 @@
     "prompt_id": 3,
     "rep": 3,
     "score": 1,
-    "evidence": "Give out free bites of sourdough at the shop counter on Friday afternoons, along with a card for the Saturday box. Also ask 2–3 businesses within 3 km (a café, a deli, a gym) to stock a few loaves with that card attached. Samples cost cents and use no Saturday slots, so the problems from the free box don't come back. People still pay €18 from their first box."
+    "evidence": "Sell a one-off €18 box that someone buys for a neighbour, a colleague or a parent within 3 km, with a card saying who sent it. You're paid for every box, it fits the Christmas season, and each recipient gets the product from someone they trust. That's a better lead than a free box. Put a signup offer in the gift box. Cap the number per Saturday so they don't push out subscribers."
   },
   {
     "file": "c-p3-r4.json",
@@ -509,7 +509,7 @@
     "prompt_id": 3,
     "rep": 4,
     "score": 1,
-    "evidence": "**3. Building and workplace drops.** Find 2–3 apartment buildings or offices within 3 km and sign up a group at one address. Five or more boxes to one stop uses far less of the cargo bike's Saturday capacity than five separate homes. Ask a building manager, office manager or tenants' group to promote it for you. Their reward could be one free box for them, not a discount for everyone. This also works well with bake-to-order, because a group gives you a predictable batch."
+    "evidence": "**1. Referral from current subscribers: half price for the friend, a free loaf for the referrer**"
   },
   {
     "file": "c-p3-r5.json",
@@ -524,8 +524,8 @@
     "cond": "c",
     "prompt_id": 4,
     "rep": 1,
-    "score": 0,
-    "evidence": ""
+    "score": 1,
+    "evidence": "3. **Let people taste it at the shop, not on Saturdays.** Put out sourdough samples at the counter with a QR code to sign up. It costs a few loaves and uses no delivery slots, which was the problem with the free box."
   },
   {
     "file": "c-p4-r2.json",
@@ -533,15 +533,15 @@
     "prompt_id": 4,
     "rep": 2,
     "score": 1,
-    "evidence": "3. **Let subscribers gift a box to a neighbour.** The subscriber pays and you deliver with a handwritten card. Because the person comes recommended by someone they know, they're more likely to stay than the people who took free boxes."
+    "evidence": "4. **Let subscribers gift a box.** A subscriber pays €18 to send a box to a neighbour. You get paid for the slot, and the neighbour tries it for free through someone they trust."
   },
   {
     "file": "c-p4-r3.json",
     "cond": "c",
     "prompt_id": 4,
     "rep": 3,
-    "score": 0,
-    "evidence": ""
+    "score": 1,
+    "evidence": "1. **Sell a single box with no commitment.** Offer one €18 box with no subscription, then ask \"want next Saturday too?\" when you deliver it. A paid first box filters out people who only want free bread, and it doesn't give away a Saturday slot. Your September numbers suggest this filtering matters more than the size of the discount."
   },
   {
     "file": "c-p4-r4.json",
@@ -549,6 +549,54 @@
     "prompt_id": 4,
     "rep": 4,
     "score": 1,
-    "evidence": "5. **A one-off paid box with no subscription, at the full €18.** It's for people who want to try it once. Follow up on Sunday with \"Want this every week?\" They're paying customers, so it doesn't repeat the free-box problem. Keep an eye on whether it takes slots away from subscribers."
+    "evidence": "4. **Free tasting at the shop counter.** Put out a few slices of that week's box loaves with a QR code to sign up. This costs little, uses no delivery slots and needs no seating (you also dropped café seating)."
+  },
+  {
+    "file": "c-p4-r5.json",
+    "cond": "c",
+    "prompt_id": 4,
+    "rep": 5,
+    "score": 1,
+    "evidence": "2. **Sell a single box.** One paid box for €18 with no subscription, and a one-click upgrade afterwards. It's still paid from the first week, so it fits the decision, and people who pay are likely to be more serious than the free-box crowd."
+  },
+  {
+    "file": "c-p5-r1.json",
+    "cond": "c",
+    "prompt_id": 5,
+    "rep": 1,
+    "score": 0,
+    "evidence": ""
+  },
+  {
+    "file": "c-p5-r2.json",
+    "cond": "c",
+    "prompt_id": 5,
+    "rep": 2,
+    "score": 0,
+    "evidence": ""
+  },
+  {
+    "file": "c-p5-r3.json",
+    "cond": "c",
+    "prompt_id": 5,
+    "rep": 3,
+    "score": 1,
+    "evidence": "Sell 4-week and 8-week gift boxes, paid in full upfront, with a printed card. It's well timed and you get the cash in advance. Recipients are already paying customers when the gift ends, so it's not a free trial, and the conversion pitch is \"keep it going.\" Promote it in the shop, in the boxes and on a sign on the bikes."
+  },
+  {
+    "file": "c-p5-r4.json",
+    "cond": "c",
+    "prompt_id": 5,
+    "rep": 4,
+    "score": 1,
+    "evidence": "- Track how many referred people are still paying after a month, and compare it with the free box's 6 out of 52."
+  },
+  {
+    "file": "c-p5-r5.json",
+    "cond": "c",
+    "prompt_id": 5,
+    "rep": 5,
+    "score": 1,
+    "evidence": "Going from 140 to 280 subscribers means 140 new paid signups in a month. In October you got 15. That would need about 9 times your best recent pace. Even if you could find the demand, Saturday delivery is already your capacity limit (that's partly why the free box failed). If 140 new boxes arrived at once, warm bread and doorstep contact would be the first things to go."
   }
 ]

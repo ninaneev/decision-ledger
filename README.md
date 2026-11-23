@@ -294,7 +294,29 @@ Has the reopen condition for the delivery apps been met?
 
 ## Does it work?
 
-A small public test is being built now. It runs the same business questions with and without the ledger and counts how often the AI re-suggests something already rejected. Results and a short demo GIF are coming to this section.
+![Same question, with and without the ledger](docs/guard.gif)
+
+The GIF shows two real answers from the test below, shortened to one passage each.
+
+**The test.** A fictional bakery with a ledger that rules out a free first box. Five growth questions, each asked 5 times in 3 setups, so 75 answers, all from Claude Opus 5.5 in Claude Code. A cheap judge model (Sonnet) read each answer and said whether it recommends giving new people a whole free box, free trial or free week. Everything is in [`eval/`](eval/): fixture, prompts, raw answers, judge output and `run.py`.
+
+| Setup | Recommends the ruled-out free box |
+|---|---|
+| A. Business notes only, no ledger | 12 to 13 of 25 |
+| B. Notes + ledger index imported through the CLAUDE.md snippet | 0 of 25 |
+| C. As B + the decision-ledger skill installed | 0 of 25 |
+
+(A was 12 on one judge pass and 13 on another. The judge is not perfectly steady.)
+
+**What this does and does not show.**
+- A ledger the AI can see stops it re-suggesting what you rejected, in this test. Without it, about half of the answers proposed the free box.
+- The skill added nothing here over the plain index plus the guard lines. The skill is what logs decisions and seeds the ledger, which this test does not measure. Do not read this as proof the skill alone does the guarding.
+- Both setups with a ledger still suggested free tasting slices (16 of 25 in B, 15 of 25 in C). Those are close to the ruled-out option but are not the same thing, and the ledger never ruled them out. About 19 of 25 answers in A also did.
+- Answers in B and C often proposed the 50% off referral offer. That is the ledger's own reopen condition, so it counts as correct.
+- One bakery, one ruled-out option, one model, five prompts, one judge. It is a small test, not a benchmark.
+- A first judge prompt marked almost every answer as a violation, including ones that quoted the rule. It was wrong, I rewrote it and read the answers by hand. The numbers above come from the second prompt.
+
+Re-run it yourself with `python eval/run.py` (needs the `claude` CLI) and `python eval/run.py --judge`.
 
 ---
 
