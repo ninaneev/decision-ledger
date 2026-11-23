@@ -6,7 +6,7 @@ Date: 2026-05-12
 Status: active
 Area: marketing
 Reversible: yes
-Revisit: 2026-08-12
+Revisit: 2026-08-10
 
 ## Decision
 One channel. A free tasting box and a printed card in the lobby of every apartment building within 1 km, two buildings a week, for 90 days. No food delivery apps.

@@ -59,7 +59,7 @@ Codex reads `AGENTS.md` from `~/.codex/` and from every folder between the repo 
 
 ### Gemini CLI
 
-Gemini CLI asks you to approve a skill the first time it activates it. Paste the guard block into `GEMINI.md`. Google notes that for unpaid and Google One users, Gemini CLI was replaced by Antigravity CLI in June 2026; this section covers Gemini CLI only.
+Gemini CLI asks you to approve a skill the first time it activates it. Paste the guard block into `GEMINI.md`. This section covers Gemini CLI only.
 
 ### Cursor
 

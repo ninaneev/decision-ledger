@@ -117,13 +117,14 @@ And the index your AI reads every session (fictional example)
 | Since | Rule | Why |
 |---|---|---|
 | 2026-03-02 | Bread goes out the same day it is baked | Fresh bread at the door is the whole promise |
+| 2026-03-02 | No customer addresses outside our own list | Neighbours trust us with their door codes |
 
 **Decisions**
 
 | Date | Decision | Discarded | Reversible | Status | Revisit | Record |
 |---|---|---|---|---|---|---|
 | 2026-06-03 | 3 year lease on the corner kitchen | shared kitchen across town, home kitchen | no | active | 2027-06-03 | [record](examples/2026-06-03-kitchen-lease.md) |
-| 2026-05-12 | Building lobbies only, 90 days | food delivery apps, paid local ads | yes | active | 2026-08-12 | [record](examples/2026-05-12-one-channel.md) |
+| 2026-05-12 | Building lobbies only, 90 days | food delivery apps, paid local ads | yes | active | 2026-08-10 | [record](examples/2026-05-12-one-channel.md) |
 | 2026-04-20 | Weekly bread box €18, delivery included | single orders only, daily box | yes | active | 2026-07-20 | [record](examples/2026-04-20-bread-box.md) |
 | 2026-03-02 | €3 delivery fee per order | free delivery over €25, free delivery, loyalty card | yes | superseded | 2026-06-01 | [record](examples/2026-03-02-pricing-model.md) |
 
@@ -312,7 +313,7 @@ Built in memory keeps facts about you. It does not keep which options you reject
 Tools like [selvedge](https://github.com/masondelan/selvedge) and [adr-kit](https://github.com/rvdbreemen/adr-kit) are built for coding decisions and you install them as software. Decision Ledger is for business decisions such as pricing, channels, offers and hires. It works with no install at all in chat tools, and it can keep the ledger in markdown, Notion, Airtable or a spreadsheet. Its record format is a light version of [MADR](https://adr.github.io/madr/).
 
 **Will it slow my sessions down?**
-The index is one short table. Your AI reads it in a moment, and opens a full record only when it needs the reason. When it grows past about 40 rows, old superseded rows move to `ledger/ARCHIVE.md`.
+The index is one short table. Your AI reads it in a moment, and opens a full record only when it needs the reason. When it grows past about 40 rows, the skill offers to move old superseded rows to `ledger/ARCHIVE.md`.
 
 **Can I use one ledger across several projects?**
 Yes. Put the folder in your home directory and use the full path in your `CLAUDE.md`. See [`setup/CLAUDE-snippet.md`](setup/CLAUDE-snippet.md).

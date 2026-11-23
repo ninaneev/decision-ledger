@@ -25,7 +25,7 @@ An empty ledger protects nothing. On first use, offer a 10 minute interview.
    what else was on the table, why each lost, what would make them
    reconsider, and whether it can be undone cheaply.
 2. Ask once for rules that must never be broken (invariants). Log each one in
-   the Invariants section, see §5.
+   the Invariants section, see §5 and §6.
 3. Stop at 5 decisions or when the user says enough.
 4. Log each one as in §2, with the real date if they remember it, or the
    first day of the month they name. Mark guessed dates `(approx)`.

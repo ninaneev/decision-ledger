@@ -26,7 +26,7 @@ Call the answers PROJECT, SCOPE and BACKEND.
 If this repo is not on disk yet, clone it into a temporary folder.
 
 ```bash
-git clone --depth 1 https://github.com/ninaneev/decision-ledger.git "$TMPDIR/decision-ledger"
+git clone --depth 1 https://github.com/ninaneev/decision-ledger.git "${TMPDIR:-/tmp}/decision-ledger"
 ```
 
 On Windows PowerShell use `$env:TEMP\decision-ledger` as the target. Call that folder REPO.
@@ -54,11 +54,11 @@ If a `ledger/` folder already exists there, do not copy. Tell the user and use t
 
 ## Step 5. Add the always on guard
 
-Pick the rules file for your tool. Create it if it does not exist. If it exists, append, never replace.
+Pick the rules file for your tool. Create it if it does not exist. If it exists, show the user the block you would append and ask before changing it; never replace.
 
 | You are | Rules file | Block to append |
 |---|---|---|
-| Claude Code | `PROJECT/CLAUDE.md` (or `~/.claude/CLAUDE.md` for SCOPE home folder) | the block in `REPO/setup/CLAUDE-snippet.md` |
+| Claude Code | `PROJECT/CLAUDE.md` (or `~/.claude/CLAUDE.md` for SCOPE home folder) | the section from `## Decision Ledger` to the first `---` in `REPO/setup/CLAUDE-snippet.md` (not the hook section) |
 | Codex CLI, Windsurf, OpenClaw | `PROJECT/AGENTS.md` | the guard block in `REPO/setup/other-tools.md` |
 | Gemini CLI | `PROJECT/GEMINI.md` | the guard block in `REPO/setup/other-tools.md` |
 | Cursor | `PROJECT/.cursor/rules/decision-ledger.mdc` | the `.mdc` header and guard block in `REPO/setup/other-tools.md` |
@@ -70,7 +70,7 @@ For BACKEND Notion, Airtable or spreadsheet, append the matching block from `REP
 
 ## Step 6. Optional hook (Claude Code and markdown only)
 
-Ask nothing. Tell the user the hook exists and point to the "Optional" section of `REPO/setup/CLAUDE-snippet.md`. If `PROJECT/.claude/settings.json` does not exist, offer to copy `REPO/setup/session-start-hook.json` there. Never merge it into an existing settings file without showing the user the result first.
+Do not ask. Tell the user the hook exists and point to the "Optional" section of `REPO/setup/CLAUDE-snippet.md`. If `PROJECT/.claude/settings.json` does not exist, list the copy command for `REPO/setup/session-start-hook.json` in the step 7 checklist. Never merge it into an existing settings file without showing the user the result first.
 
 ## Step 7. Check and report
 

@@ -17,7 +17,8 @@ New page in Notion, type `/database`, call it `Decision Ledger`, and add these c
 | Reversible | Select: yes, no | Whether it can be undone cheaply |
 | Status | Select: open, active, superseded, reversed | Where it stands |
 | Type | Select: decision, invariant | Invariants are rules you never break |
-| Area | Select: pricing, product, marketing, tools, hiring, personal | One word you would search for |
+| Area | Select: pricing, product, marketing, tools, hiring, offer, operations, personal | One word you would search for |
+| Date | Date | When it was decided |
 | Revisit | Date | When to look at it again |
 | Supersedes | Relation to this same database | The older decision this one replaces |
 | Superseded by | Relation to this same database | The newer decision that replaced this one |
